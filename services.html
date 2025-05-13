@@ -196,31 +196,35 @@
     </nav>
     
     <!-- Header Section -->
-    <header class="bg-white relative overflow-hidden">
-        <!-- Decorative elements -->
-        <div class="absolute inset-0 max-w-full">
-            <div class="absolute -top-[10%] -right-[5%] w-[40%] h-[50%] bg-[radial-gradient(circle,rgba(56,189,248,0.12),transparent_70%)]">
-            </div>
-            <div class="absolute -bottom-[10%] -left-[5%] w-[40%] h-[50%] bg-[radial-gradient(circle,rgba(124,58,237,0.08),transparent_70%)]">
+    <header class="bg-subtle relative overflow-hidden py-20 md:py-28">
+        <!-- Grid pattern background -->
+        <div class="grid-pattern"></div>
+        
+        <!-- Glowing orbs -->
+        <div class="absolute opacity-10 w-96 h-96 rounded-full bg-sky-400 blur-[80px] top-10 left-1/4 animate-pulse-slow"></div>
+        <div class="absolute opacity-10 w-96 h-96 rounded-full bg-purple-500 blur-[80px] bottom-10 right-1/4 animate-pulse-slow" style="animation-delay: 2s"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+            <div class="text-center">
+                <span class="heading-badge">ENTERPRISE AI SOLUTIONS</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
+                    Our <span class="text-gradient">Services</span>
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-xl text-slate-600">
+                    Comprehensive AI services designed to help your business leverage the full potential of artificial intelligence and stay ahead in the digital transformation journey.
+                </p>
+                
+                <!-- Page Breadcrumbs -->
+                <div class="mt-10 inline-flex items-center py-1 px-3 rounded-full bg-white shadow-sm text-sm text-slate-600">
+                    <a href="index.html" class="hover:text-sky-500 transition-colors">Home</a>
+                    <i class="fas fa-chevron-right text-xs mx-2 text-slate-400"></i>
+                    <span class="text-sky-500 font-medium">Services</span>
+                </div>
             </div>
         </div>
         
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-20 md:py-28 relative z-10">
-            <div class="text-center">
-                <span class="px-4 py-1.5 bg-gradient-to-r from-sky-50 to-indigo-50 text-sky-600 rounded-full text-sm font-medium inline-block mb-6">ENTERPRISE AI SOLUTIONS</span>
-                <h1 class="text-4xl font-extrabold text-slate-900 sm:text-5xl sm:tracking-tight lg:text-6xl mb-8 leading-tight">
-                    Our <span class="text-gradient">Services</span>
-                </h1>
-                <div class="max-w-3xl mx-auto">
-                    <p class="text-xl text-slate-600">
-                        Comprehensive AI services designed to help your business leverage the full potential of artificial intelligence and stay ahead in the digital transformation journey.
-                    </p>
-                </div>
-                
-                <!-- Decorative line -->
-                <div class="w-24 h-1.5 bg-gradient-to-r from-sky-500 to-indigo-600 mx-auto mt-10 rounded-full"></div>
-            </div>
-        </div>
+        <!-- Bottom wave -->
+        <div class="absolute bottom-0 left-0 right-0 h-8 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI4MHB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTEyODAgMEw2NDAgNzAgMCAwdjE0MGgxMjgwVjB6IiBmaWxsLW9wYWNpdHk9Ii41Ii8+PHBhdGggZD0iTTEyODAgMEgwbDY0MCA3MEwxMjgwIDB6Ii8+PC9nPjwvc3ZnPg==')] bg-no-repeat bg-bottom bg-[length:100%_100%] opacity-50"></div>
     </header>
     
     <!-- Services Section -->
@@ -734,13 +738,13 @@
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <p class="text-slate-400 text-sm mb-4 md:mb-0">&copy; 2023 Masna AI. All rights reserved.</p>
                     <div class="flex space-x-6">
-                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-slate-800 hover:bg-sky-600 text-slate-300 hover:text-white transition-all duration-300">
+                        <a href="https://www.linkedin.com/company/masna-ai" class="w-10 h-10 rounded-full flex items-center justify-center bg-slate-800 hover:bg-sky-600 text-slate-300 hover:text-white transition-all duration-300">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-slate-800 hover:bg-sky-600 text-slate-300 hover:text-white transition-all duration-300">
+                        <a href="https://x.com/MasnaAi" class="w-10 h-10 rounded-full flex items-center justify-center bg-slate-800 hover:bg-sky-600 text-slate-300 hover:text-white transition-all duration-300">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-slate-800 hover:bg-sky-600 text-slate-300 hover:text-white transition-all duration-300">
+                        <a href="https://github.com/orgs/masna-ai" class="w-10 h-10 rounded-full flex items-center justify-center bg-slate-800 hover:bg-sky-600 text-slate-300 hover:text-white transition-all duration-300">
                             <i class="fab fa-github"></i>
                         </a>
                     </div>
