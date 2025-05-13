@@ -189,13 +189,13 @@
                             <div class="absolute top-0 right-0 w-64 h-64 bg-sky-50 rounded-full blur-xl opacity-70 -translate-y-1/2 translate-x-1/3"></div>
                             
                             <div class="relative z-10">
-                                <span class="heading-badge">CODE ASSISTANT</span>
+                                <span class="heading-badge">STATIC CODE ANALYSIS</span>
                                 <div class="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-sky-50 text-sky-500 mb-6 border border-sky-100">
-                                    <i class="fas fa-code text-2xl"></i>
+                                    <i class="fas fa-shield-alt text-2xl"></i>
                                 </div>
                                 <h2 class="text-3xl font-bold mb-4 text-slate-800">CodeSage</h2>
                                 <p class="text-slate-600 mb-8 leading-relaxed">
-                                    An intelligent AI-powered code assistant that helps developers write better code faster. CodeSage understands context, suggests improvements, and learns from your coding style.
+                                    AI-Powered Static Code Analysis Platform specifically for <a href="https://docs.apigee.com/" class="text-sky-500 hover:text-sky-600 transition-colors">Google Apigee</a> and <a href="https://www.ibm.com/products/webmethods-integration" class="text-sky-500 hover:text-sky-600 transition-colors">IBM webMethods</a>. CodeSage ensures code compliance, detects security vulnerabilities, and enforces coding standards, streamlining your development lifecycle.
                                 </p>
                                 
                                 <h3 class="text-xl font-semibold mb-5 text-slate-800">Key Features</h3>
@@ -204,31 +204,31 @@
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-sky-50 text-sky-500 mt-0.5 mr-3 border border-sky-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">Real-time code suggestions and auto-completion</span>
+                                        <span class="text-slate-700">CI Pipeline Integration with automated PR approvals</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-sky-50 text-sky-500 mt-0.5 mr-3 border border-sky-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">Intelligent bug detection and fixing</span>
+                                        <span class="text-slate-700">Apigeelint Integration for Google Apigee compliance</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-sky-50 text-sky-500 mt-0.5 mr-3 border border-sky-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">Code refactoring and optimization recommendations</span>
+                                        <span class="text-slate-700">Native IBM webMethods flow service static code review</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-sky-50 text-sky-500 mt-0.5 mr-3 border border-sky-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">Support for multiple programming languages</span>
+                                        <span class="text-slate-700">AI-powered extensible architecture for custom rules</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-sky-50 text-sky-500 mt-0.5 mr-3 border border-sky-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">Seamless integration with popular IDEs</span>
+                                        <span class="text-slate-700">Interactive CodeSage Portal with intuitive analytics</span>
                                     </li>
                                 </ul>
                                 
@@ -250,35 +250,37 @@
                                         <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                                         <div class="w-3 h-3 rounded-full bg-green-500"></div>
                                     </div>
-                                    <div class="ml-4 text-white opacity-80 text-sm">main.py</div>
+                                    <div class="ml-4 text-white opacity-80 text-sm">static-analysis.yml</div>
                                 </div>
                                 <div class="bg-slate-900 rounded-lg p-4 font-mono text-sm text-white overflow-hidden">
-                                    <div class="text-sky-400">def <span class="text-green-400">optimize_code</span>():</div>
-                                    <div class="ml-4">
-                                        <span class="text-pink-400">with</span> CodeSage <span class="text-pink-400">as</span> sage:
-                                    </div>
-                                    <div class="ml-8 text-slate-400"># Intelligent suggestions</div>
-                                    <div class="ml-8 text-amber-300">suggestions = sage.analyze(current_code)</div>
-                                    <div class="ml-8 text-slate-400"># Apply optimizations</div>
-                                    <div class="ml-8 text-amber-300">optimized = sage.refactor(suggestions)</div>
-                                    <div class="ml-8 text-slate-400"># Validate changes</div>
-                                    <div class="ml-8 text-amber-300">validated = sage.validate(optimized)</div>
-                                    <div class="ml-4">
-                                        <span class="text-pink-400">return</span> validated
-                                    </div>
+                                    <div class="text-slate-400"># CodeSage CI Integration Pipeline</div>
+                                    <div class="text-sky-400">name: <span class="text-green-400">Code Analysis</span></div>
+                                    <div class="text-sky-400">on:</div>
+                                    <div class="ml-4 text-amber-300">pull_request:</div>
+                                    <div class="ml-8 text-amber-300">branches: [ main, development ]</div>
+                                    <div class="text-sky-400">jobs:</div>
+                                    <div class="ml-4 text-sky-400">codesage:</div>
+                                    <div class="ml-8 text-sky-400">runs-on: <span class="text-green-400">ubuntu-latest</span></div>
+                                    <div class="ml-8 text-sky-400">steps:</div>
+                                    <div class="ml-12 text-amber-300">- uses: actions/checkout@v3</div>
+                                    <div class="ml-12 text-amber-300">- name: CodeSage Analysis</div>
+                                    <div class="ml-12 text-amber-300">  uses: masna-ai/codesage-action@v1</div>
+                                    <div class="ml-12 text-amber-300">  with:</div>
+                                    <div class="ml-16 text-pink-400">api-token: ${{ secrets.CODESAGE_TOKEN }}</div>
+                                    <div class="ml-16 text-pink-400">platforms: "apigee,webmethods"</div>
                                 </div>
                                 <div class="flex justify-between mt-4 text-white text-sm">
                                     <div class="flex items-center px-2 py-1 bg-white/10 rounded-md">
-                                        <i class="fas fa-bolt mr-1"></i>
-                                        <span>40% faster</span>
+                                        <i class="fas fa-shield-alt mr-1"></i>
+                                        <span>Security Checked</span>
                                     </div>
                                     <div class="flex items-center px-2 py-1 bg-white/10 rounded-md">
                                         <i class="fas fa-check-circle mr-1"></i>
-                                        <span>Bug-free</span>
+                                        <span>Standards Compliant</span>
                                     </div>
                                     <div class="flex items-center px-2 py-1 bg-white/10 rounded-md">
-                                        <i class="fas fa-code mr-1"></i>
-                                        <span>Optimized</span>
+                                        <i class="fas fa-code-branch mr-1"></i>
+                                        <span>Auto-Approved</span>
                                     </div>
                                 </div>
                             </div>
@@ -297,37 +299,44 @@
                             <div class="absolute bottom-0 left-0 w-64 h-64 bg-pink-900/10 rounded-full blur-3xl translate-y-1/4 -translate-x-1/4"></div>
                             
                             <div class="w-full max-w-md relative z-10">
-                                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 mb-6 border border-white/10 shadow-lg">
-                                    <div class="flex justify-between items-center mb-4">
-                                        <h4 class="font-semibold text-white">Content Generator</h4>
-                                        <span class="px-2 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Active</span>
+                                <div class="bg-slate-800 rounded-t-xl p-3 flex items-center mb-0">
+                                    <div class="flex space-x-2">
+                                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
                                     </div>
-                                    <div class="flex space-x-4 mb-6">
-                                        <button class="px-3 py-1 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-md text-sm shadow-sm">Articles</button>
-                                        <button class="px-3 py-1 bg-white/10 text-white rounded-md text-sm">Social</button>
-                                        <button class="px-3 py-1 bg-white/10 text-white rounded-md text-sm">Email</button>
-                                    </div>
-                                    <div class="space-y-3">
-                                        <div class="h-2 bg-white/10 rounded-full w-full"></div>
-                                        <div class="h-2 bg-white/10 rounded-full w-5/6"></div>
-                                        <div class="h-2 bg-white/10 rounded-full w-4/6"></div>
-                                    </div>
+                                    <div class="ml-4 text-white opacity-80 text-sm font-mono">webMethodsService.java</div>
+                                </div>
+                                
+                                <div class="bg-slate-900 font-mono text-sm text-white p-4 rounded-b-xl mb-6 border border-slate-700/30 shadow-xl">
+                                    <div class="text-pink-400">public</div> <div class="text-sky-300">class</div> <div class="text-green-400">CustomerAPI</div> <div class="text-white">{</div>
+                                    <div class="ml-4 text-slate-400">// GenFlow auto-generated service</div>
+                                    <div class="ml-4 text-pink-400">public</div> <div class="ml-1 text-amber-300">IData</div> <div class="ml-1 text-green-400">getCustomerDetails</div><div class="text-white">(</div><div class="text-amber-300">IData</div> <div class="text-white">pipeline) {</div>
+                                    <div class="ml-8 text-slate-400">// Retrieve customer information from database</div>
+                                    <div class="ml-8 text-pink-400">try</div> <div class="text-white">{</div>
+                                    <div class="ml-12 text-amber-300">String</div> <div class="text-white">customerId = IDataUtil.getString(pipeline, </div><div class="text-teal-300">"customerId"</div><div class="text-white">);</div>
+                                    <div class="ml-12 text-slate-400">// Execute database adapter service</div>
+                                    <div class="ml-12 text-sky-300">...</div>
+                                    <div class="ml-8 text-white">}</div>
+                                    <div class="ml-8 text-pink-400">return</div> <div class="text-white">output;</div>
+                                    <div class="ml-4 text-white">}</div>
+                                    <div class="text-white">}</div>
                                 </div>
                                 
                                 <div class="grid grid-cols-2 gap-4">
-                                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-white border border-white/10 shadow-md">
-                                        <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center mb-3">
-                                            <i class="fas fa-brain text-xl"></i>
+                                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-white border border-white/10 shadow-md">
+                                        <div class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center mb-2">
+                                            <i class="fas fa-bolt text-xl"></i>
                                         </div>
-                                        <h4 class="font-semibold mb-1">AI Templates</h4>
-                                        <p class="text-xs text-white/80">20+ templates for various content types</p>
+                                        <h4 class="text-sm font-semibold mb-1">Development Speed</h4>
+                                        <p class="text-xs text-white/80">40 hrs → 40 mins</p>
                                     </div>
-                                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-white border border-white/10 shadow-md">
-                                        <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center mb-3">
-                                            <i class="fas fa-chart-line text-xl"></i>
+                                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-white border border-white/10 shadow-md">
+                                        <div class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center mb-2">
+                                            <i class="fas fa-cogs text-xl"></i>
                                         </div>
-                                        <h4 class="font-semibold mb-1">Analytics</h4>
-                                        <p class="text-xs text-white/80">Content performance tracking</p>
+                                        <h4 class="text-sm font-semibold mb-1">Service Types</h4>
+                                        <p class="text-xs text-white/80">Adapters, Triggers, APIs</p>
                                     </div>
                                 </div>
                             </div>
@@ -338,13 +347,13 @@
                             <div class="absolute top-0 left-0 w-64 h-64 bg-purple-50 rounded-full blur-xl opacity-70 -translate-y-1/2 -translate-x-1/3"></div>
                             
                             <div class="relative z-10">
-                                <span class="heading-badge">CONTENT CREATION</span>
+                                <span class="heading-badge">WEBMETHODS DEVELOPMENT AGENT</span>
                                 <div class="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-purple-50 text-purple-500 mb-6 border border-purple-100">
-                                    <i class="fas fa-pen-fancy text-2xl"></i>
+                                    <i class="fas fa-robot text-2xl"></i>
                                 </div>
                                 <h2 class="text-3xl font-bold mb-4 text-slate-800">GenFlow</h2>
                                 <p class="text-slate-600 mb-8 leading-relaxed">
-                                    An advanced content generation platform that creates high-quality, engaging content for your business. From blog posts to social media updates, GenFlow delivers compelling content that resonates with your audience.
+                                    <strong>GenFlow is AI Agent for developing service in IBM webMethods</strong>, reducing the developer time of creating services from 40 hours to 40 minutes. It provides a full workflow from requirement gathering to implementation, automating and streamlining the development process.
                                 </p>
                                 
                                 <h3 class="text-xl font-semibold mb-5 text-slate-800">Key Features</h3>
@@ -353,36 +362,36 @@
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-purple-50 text-purple-500 mt-0.5 mr-3 border border-purple-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">AI-powered content generation for multiple formats</span>
+                                        <span class="text-slate-700">Automated requirement gathering using Confluence MCP sources</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-purple-50 text-purple-500 mt-0.5 mr-3 border border-purple-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">Brand voice preservation and customization</span>
+                                        <span class="text-slate-700">Complete service creation including adapters, triggers, and web services</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-purple-50 text-purple-500 mt-0.5 mr-3 border border-purple-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">SEO optimization and keyword integration</span>
+                                        <span class="text-slate-700">90% reduction in development time (40 hours → 40 minutes)</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-purple-50 text-purple-500 mt-0.5 mr-3 border border-purple-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">Content calendar and scheduling tools</span>
+                                        <span class="text-slate-700">End-to-end workflow automation from requirements to deployment</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-purple-50 text-purple-500 mt-0.5 mr-3 border border-purple-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">Performance analytics and improvement suggestions</span>
+                                        <span class="text-slate-700">Integration with IBM webMethods development environment</span>
                                     </li>
                                 </ul>
                                 
-                                <a href="contact.html" class="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-medium hover:from-purple-600 hover:to-pink-700 inline-flex items-center transition-all shadow-sm hover:shadow">
-                                    Request a Demo <i class="fas fa-arrow-right ml-2"></i>
+                                <a href="contact.html" class="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-medium hover:from-purple-600 hover:to-pink-700 inline-flex items-center transition-all shadow-sm hover:shadow-lg hover:translate-y-[-2px]">
+                                    Book a Consultation <i class="fas fa-calendar-check ml-2"></i>
                                 </a>
                             </div>
                         </div>
@@ -399,13 +408,13 @@
                             <div class="absolute top-0 right-0 w-64 h-64 bg-teal-50 rounded-full blur-xl opacity-70 -translate-y-1/2 translate-x-1/3"></div>
                             
                             <div class="relative z-10">
-                                <span class="heading-badge">DESIGN TOOL</span>
+                                <span class="heading-badge">API MOCKING PLATFORM</span>
                                 <div class="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-teal-50 text-teal-500 mb-6 border border-teal-100">
-                                    <i class="fas fa-paint-brush text-2xl"></i>
+                                    <i class="fas fa-server text-2xl"></i>
                                 </div>
                                 <h2 class="text-3xl font-bold mb-4 text-slate-800">Mockgee</h2>
                                 <p class="text-slate-600 mb-8 leading-relaxed">
-                                    An innovative AI-powered design tool that transforms your ideas into beautiful mockups and prototypes in seconds. Streamline your design process and bring your vision to life with Mockgee.
+                                    <strong>Mockgee is API mocking platform for enterprise</strong> that streamlines development processes with fast, reliable API mocking. Build better applications faster with our intuitive and powerful platform, helping teams eliminate dependencies and accelerate time-to-market.
                                 </p>
                                 
                                 <h3 class="text-xl font-semibold mb-5 text-slate-800">Key Features</h3>
@@ -414,36 +423,36 @@
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-teal-50 text-teal-500 mt-0.5 mr-3 border border-teal-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">AI-powered mockup generation from text descriptions</span>
+                                        <span class="text-slate-700">Full standard support for OpenAPI, Swagger, WSDL, and Postman collections</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-teal-50 text-teal-500 mt-0.5 mr-3 border border-teal-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">Responsive design for web, mobile, and desktop</span>
+                                        <span class="text-slate-700">Real API simulation that precisely mirrors production environment</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-teal-50 text-teal-500 mt-0.5 mr-3 border border-teal-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">Interactive prototype creation and testing</span>
+                                        <span class="text-slate-700">Proxy mode for parallel mock & real target responses</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-teal-50 text-teal-500 mt-0.5 mr-3 border border-teal-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">Design system integration and consistency</span>
+                                        <span class="text-slate-700">99.9% uptime guarantee for enterprise-level reliability</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="w-6 h-6 flex items-center justify-center rounded-full bg-teal-50 text-teal-500 mt-0.5 mr-3 border border-teal-200">
                                             <i class="fas fa-check text-xs"></i>
                                         </span>
-                                        <span class="text-slate-700">Export to popular design and development tools</span>
+                                        <span class="text-slate-700">RESTful & SOAP API support for all integration needs</span>
                                     </li>
                                 </ul>
                                 
-                                <a href="contact.html" class="px-8 py-3 bg-gradient-to-r from-teal-500 to-emerald-600 text-white rounded-lg font-medium hover:from-teal-600 hover:to-emerald-700 inline-flex items-center transition-all shadow-sm hover:shadow">
-                                    Request a Demo <i class="fas fa-arrow-right ml-2"></i>
+                                <a href="https://mockgee.com/" target="_blank" class="px-8 py-3 bg-gradient-to-r from-teal-500 to-emerald-600 text-white rounded-lg font-medium hover:from-teal-600 hover:to-emerald-700 inline-flex items-center transition-all shadow-sm hover:shadow">
+                                    Visit Mockgee <i class="fas fa-external-link-alt ml-2"></i>
                                 </a>
                             </div>
                         </div>
@@ -454,36 +463,45 @@
                             <div class="absolute bottom-0 right-0 w-64 h-64 bg-emerald-900/10 rounded-full blur-3xl translate-y-1/4 translate-x-1/4"></div>
                             
                             <div class="w-full max-w-md relative z-10">
-                                <div class="grid grid-cols-3 gap-4 mb-6">
-                                    <div class="bg-white/5 backdrop-blur-sm rounded-xl shadow-lg h-32 flex items-center justify-center border border-white/10">
-                                        <i class="fas fa-mobile-alt text-white text-3xl"></i>
+                                <div class="bg-slate-800 rounded-t-xl p-3 flex items-center mb-0">
+                                    <div class="flex space-x-2">
+                                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
                                     </div>
-                                    <div class="bg-white/5 backdrop-blur-sm rounded-xl shadow-lg h-32 col-span-2 flex items-center justify-center border border-white/10">
-                                        <i class="fas fa-laptop text-white text-3xl"></i>
-                                    </div>
+                                    <div class="ml-4 text-white opacity-80 text-sm font-mono">mockgee.json</div>
                                 </div>
                                 
-                                <div class="bg-white/5 backdrop-blur-sm rounded-xl shadow-lg p-5 mb-6 border border-white/10">
-                                    <div class="h-4 w-24 bg-white/20 rounded-full mb-4"></div>
-                                    <div class="grid grid-cols-3 gap-3">
-                                        <div class="h-20 bg-white/10 rounded-lg"></div>
-                                        <div class="h-20 bg-white/10 rounded-lg"></div>
-                                        <div class="h-20 bg-white/10 rounded-lg"></div>
-                                    </div>
+                                <div class="bg-slate-900 font-mono text-sm text-white p-4 rounded-b-xl mb-6 border border-slate-700/30 shadow-xl">
+                                    <div class="text-green-400">{</div>
+                                    <div class="ml-4 text-sky-300">"openapi": <span class="text-amber-300">"3.0.0"</span>,</div>
+                                    <div class="ml-4 text-sky-300">"info": {</div>
+                                    <div class="ml-8 text-sky-300">"title": <span class="text-amber-300">"Customer API"</span>,</div>
+                                    <div class="ml-8 text-sky-300">"version": <span class="text-amber-300">"1.0.0"</span></div>
+                                    <div class="ml-4 text-sky-300">},</div>
+                                    <div class="ml-4 text-sky-300">"paths": {</div>
+                                    <div class="ml-8 text-sky-300">"/customers": {</div>
+                                    <div class="ml-12 text-sky-300">"get": {</div>
+                                    <div class="ml-16 text-sky-300">"mock": <span class="text-purple-400">true</span>,</div>
+                                    <div class="ml-16 text-sky-300">"response": [...]</div>
+                                    <div class="ml-12 text-sky-300">}</div>
+                                    <div class="ml-8 text-sky-300">}</div>
+                                    <div class="ml-4 text-sky-300">}</div>
+                                    <div class="text-green-400">}</div>
                                 </div>
                                 
                                 <div class="flex justify-between gap-3">
                                     <div class="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-4 shadow-md border border-white/10">
-                                        <div class="text-xs text-white/70 mb-1">Generate from</div>
-                                        <div class="font-medium text-white">Text</div>
+                                        <div class="text-xs text-white/70 mb-1">Format</div>
+                                        <div class="font-medium text-white">OpenAPI / WSDL</div>
                                     </div>
                                     <div class="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-4 shadow-md border border-white/10">
-                                        <div class="text-xs text-white/70 mb-1">Edit with</div>
-                                        <div class="font-medium text-white">AI</div>
+                                        <div class="text-xs text-white/70 mb-1">Support</div>
+                                        <div class="font-medium text-white">REST / SOAP</div>
                                     </div>
                                     <div class="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-4 shadow-md border border-white/10">
-                                        <div class="text-xs text-white/70 mb-1">Export as</div>
-                                        <div class="font-medium text-white">Code</div>
+                                        <div class="text-xs text-white/70 mb-1">Uptime</div>
+                                        <div class="font-medium text-white">99.9%</div>
                                     </div>
                                 </div>
                             </div>
