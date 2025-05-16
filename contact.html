@@ -264,7 +264,7 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-slate-700 hover:text-sky-600 transition-all duration-300 font-medium">Home</a>
                     <a href="products.html" class="text-slate-700 hover:text-sky-600 transition-all duration-300 font-medium">Products</a>
-                    <a href="services.html" class="text-slate-700 hover:text-sky-600 transition-all duration-300 font-medium">Services</a>
+                    <a href="solutions.html" class="text-slate-700 hover:text-sky-600 transition-all duration-300 font-medium">Solutions</a>
                     <a href="about.html" class="text-slate-700 hover:text-sky-600 transition-all duration-300 font-medium">About</a>
                     <a href="contact.html" class="text-sky-600 font-medium relative after:absolute after:bottom-[-8px] after:left-0 after:h-[3px] after:w-full after:bg-sky-600 after:rounded-full">Contact</a>
                 </div>
@@ -284,7 +284,7 @@
             <div class="space-y-1 px-4 pt-2 pb-3 sm:px-3 border-t border-gray-200">
                 <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-all duration-300">Home</a>
                 <a href="products.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-all duration-300">Products</a>
-                <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-all duration-300">Services</a>
+                <a href="solutions.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-all duration-300">Solutions</a>
                 <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-all duration-300">About</a>
                 <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium bg-sky-50 text-sky-600 transition-all duration-300">Contact</a>
             </div>
@@ -561,7 +561,7 @@
                     <h2 class="text-3xl font-bold text-slate-800 mb-4">Frequently Asked <span class="text-gradient">Questions</span></h2>
                     <div class="max-w-2xl mx-auto">
                         <p class="text-lg text-slate-600">
-                            Find answers to common questions about our AI services and technologies.
+                            Find answers to common questions about our AI solutions and technologies.
                         </p>
                     </div>
                     
@@ -699,9 +699,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="services.html" class="text-slate-300 hover:text-white hover:translate-x-1 flex items-center transition-all duration-300">
+                            <a href="solutions.html" class="text-slate-300 hover:text-white hover:translate-x-1 flex items-center transition-all duration-300">
                                 <i class="fas fa-chevron-right text-xs text-sky-400 mr-2"></i>
-                                Services
+                                Solutions
                             </a>
                         </li>
                         <li>
@@ -883,6 +883,31 @@
             }
             checkIfInView();
             window.addEventListener('scroll', checkIfInView);
+            
+            // FAQ toggle functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    // Get the parent div that contains both the question and answer
+                    const faqItem = question.closest('div');
+                    
+                    // Find the answer div within this item
+                    const answer = faqItem.querySelector('.faq-answer');
+                    
+                    // Find the icon to rotate
+                    const icon = question.querySelector('i.fa-chevron-down');
+                    
+                    // Toggle the answer visibility
+                    answer.classList.toggle('hidden');
+                    
+                    // Rotate the icon when expanded
+                    if (!answer.classList.contains('hidden')) {
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
         };
     </script>        
 
