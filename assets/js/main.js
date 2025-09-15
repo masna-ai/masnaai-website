@@ -29,4 +29,31 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('load', checkScroll);
   // Check on scroll
   window.addEventListener('scroll', checkScroll);
+
+  // FAQ accordion toggles
+  const faqToggles = document.querySelectorAll('.faq-toggle');
+  if (faqToggles && faqToggles.length) {
+    faqToggles.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        // Optionally close others for accordion behavior
+        document.querySelectorAll('.faq-toggle[aria-expanded="true"]').forEach(openBtn => {
+          if (openBtn !== btn) {
+            openBtn.setAttribute('aria-expanded', 'false');
+            const openPanel = openBtn.parentElement.nextElementSibling;
+            if (openPanel && openPanel.classList.contains('faq-panel')) {
+              openPanel.classList.add('hidden');
+            }
+          }
+        });
+
+        // Toggle current
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const panel = btn.parentElement.nextElementSibling;
+        if (panel && panel.classList.contains('faq-panel')) {
+          panel.classList.toggle('hidden');
+        }
+      });
+    });
+  }
 });

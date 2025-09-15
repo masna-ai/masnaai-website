@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
     <title>Contact Us - Masna AI</title>
-    <meta name="description" content="Contact Masna AI for inquiries about our AI solutions, including agentic applications, enterprise MCP services, and AI model fine-tuning.">
+    <meta name="description" content="Contact Masna AI for inquiries about our AI solutions, including agentic applications, enterprise MCP services, and GenFlow AI agents.">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
@@ -262,9 +262,10 @@
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">Home</a>
-                    <a href="/products/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">Products</a>
-                    <a href="/solutions/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">Solutions</a>
+                    <!-- <a href="/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">Home</a> -->
+                    <!-- <a href="/products/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">Products</a> -->
+                    <!-- <a href="/solutions/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">Solutions</a> -->
+                     <a href="/products/genflow/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">GenFlow</a>
                     <a href="/about/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">About</a>
                     <a href="/careers/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">Careers</a>
                     <a href="/contact/" class="text-sky-600 font-medium">Contact</a>
@@ -472,33 +473,6 @@
                             </div>
                         </div>
                         
-                        <!-- Business Hours -->
-                        <div class="bg-white p-8 md:p-10 rounded-3xl shadow-xl hover-card">
-                            <div class="inline-block px-4 py-1.5 rounded-full bg-teal-50 text-teal-600 font-medium mb-6 border border-teal-100">
-                                <span class="flex items-center">
-                                    <i class="fas fa-clock text-lg mr-2"></i>
-                                    <span>Working Hours</span>
-                                </span>
-                            </div>
-                        
-                            <h3 class="text-2xl font-bold mb-5 text-slate-800">Business Hours</h3>
-                            <ul class="space-y-4">
-                                <li class="flex justify-between items-center border-b border-slate-100 pb-3">
-                                    <span class="text-slate-700 font-medium flex items-center">
-                                        <i class="fas fa-calendar-day text-teal-500 mr-3"></i>
-                                        Sunday - Thursday
-                                    </span>
-                                    <span class="text-slate-600 bg-slate-50 px-3 py-1 rounded-lg">8:00 AM - 4:00 PM</span>
-                                </li>
-                                <li class="flex justify-between items-center">
-                                    <span class="text-slate-700 font-medium flex items-center">
-                                        <i class="fas fa-calendar-day text-teal-500 mr-3"></i>
-                                        Friday - Saturday
-                                    </span>
-                                    <span class="text-slate-600 bg-slate-50 px-3 py-1 rounded-lg">Closed</span>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -573,82 +547,92 @@
                 
                 <div class="space-y-6 max-w-4xl mx-auto">
                     <!-- FAQ Item 1 -->
-                    <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent">
-                        <button class="faq-question w-full flex justify-between items-center focus:outline-none">
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-sky-50 flex items-center justify-center mr-4">
-                                    <i class="fas fa-robot text-sky-500"></i>
+                    <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent">
+                        <div>
+                            <button class="faq-toggle w-full flex justify-between items-center focus:outline-none" aria-expanded="false">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-sky-50 flex items-center justify-center mr-4">
+                                        <i class="fas fa-robot text-sky-500"></i>
+                                    </div>
+                                    <span class="text-xl font-bold text-slate-800">How do we get started?</span>
                                 </div>
-                                <span class="text-xl font-bold text-slate-800">What AI technologies do you specialize in?</span>
-                            </div>
-                            <i class="fas fa-chevron-down text-sky-500 transition-transform"></i>
-                        </button>
-                        <div class="faq-answer mt-6 text-slate-600 hidden pl-14">
-                            <p class="leading-relaxed">At Masna AI, we specialize in a range of cutting-edge AI technologies including large language models (LLMs), generative AI, computer vision, natural language processing, and Model Context Protocol (MCP) implementation. Our expertise spans from developing custom AI solutions to integrating AI capabilities into existing business systems.</p>
+                                <i class="fas fa-chevron-down text-sky-500 transition-transform"></i>
+                            </button>
+                        </div>
+                        <div class="faq-panel mt-6 text-slate-600 hidden pl-14">
+                            <p class="leading-relaxed">Our team conducts a thorough assessment of your requirements, we create a detailed project roadmap and timeline, and begin development with iterative feedback cycles to ensure we're building exactly what you need.</p>
                         </div>
                     </div>
-                    
+
                     <!-- FAQ Item 2 -->
-                    <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent" style="transition-delay: 0.1s;">
-                        <button class="faq-question w-full flex justify-between items-center focus:outline-none">
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center mr-4">
-                                    <i class="fas fa-chart-line text-indigo-500"></i>
+                    <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent" style="transition-delay: 0.1s;">
+                        <div>
+                            <button class="faq-toggle w-full flex justify-between items-center focus:outline-none" aria-expanded="false">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center mr-4">
+                                        <i class="fas fa-shield-alt text-indigo-500"></i>
+                                    </div>
+                                    <span class="text-xl font-bold text-slate-800">How do you ensure data security and privacy?</span>
                                 </div>
-                                <span class="text-xl font-bold text-slate-800">How can AI benefit my business?</span>
-                            </div>
-                            <i class="fas fa-chevron-down text-indigo-500 transition-transform"></i>
-                        </button>
-                        <div class="faq-answer mt-6 text-slate-600 hidden pl-14">
-                            <p class="leading-relaxed">AI can benefit your business in numerous ways, including automating routine tasks, generating insights from large datasets, enhancing customer experiences through personalization, improving decision-making processes, and creating new innovative products and services. Our team can help identify the most valuable AI applications for your specific business needs and objectives.</p>
+                                <i class="fas fa-chevron-down text-indigo-500 transition-transform"></i>
+                            </button>
+                        </div>
+                        <div class="faq-panel mt-6 text-slate-600 hidden pl-14">
+                            <p class="leading-relaxed">Enterprise security is our top priority. All our solutions can run entirely on-premises or in your private cloud environment. We support deployment of local LLMs that never send data externally, ensuring complete data sovereignty and compliance with your security policies.</p>
                         </div>
                     </div>
-                    
+
                     <!-- FAQ Item 3 -->
-                    <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent" style="transition-delay: 0.2s;">
-                        <button class="faq-question w-full flex justify-between items-center focus:outline-none">
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center mr-4">
-                                    <i class="fas fa-code-branch text-purple-500"></i>
+                    <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent" style="transition-delay: 0.2s;">
+                        <div>
+                            <button class="faq-toggle w-full flex justify-between items-center focus:outline-none" aria-expanded="false">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center mr-4">
+                                        <i class="fas fa-server text-purple-500"></i>
+                                    </div>
+                                    <span class="text-xl font-bold text-slate-800">Can the solution be deployed locally?</span>
                                 </div>
-                                <span class="text-xl font-bold text-slate-800">What is your development process like?</span>
-                            </div>
-                            <i class="fas fa-chevron-down text-purple-500 transition-transform"></i>
-                        </button>
-                        <div class="faq-answer mt-6 text-slate-600 hidden pl-14">
-                            <p class="leading-relaxed">Our development process begins with a thorough understanding of your business requirements and challenges. We then design a tailored solution, develop a prototype, and iterate based on feedback. Throughout implementation, we ensure seamless integration with your existing systems and provide comprehensive training. We also offer ongoing support and maintenance to ensure the long-term success of your AI solution.</p>
+                                <i class="fas fa-chevron-down text-purple-500 transition-transform"></i>
+                            </button>
+                        </div>
+                        <div class="faq-panel mt-6 text-slate-600 hidden pl-14">
+                            <p class="leading-relaxed">Absolutely. Our solutions are designed for flexible deployment options including fully on-premises installation. This ensures your data never leaves your infrastructure while still providing access to powerful AI capabilities.</p>
                         </div>
                     </div>
-                    
+
                     <!-- FAQ Item 4 -->
-                    <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent" style="transition-delay: 0.3s;">
-                        <button class="faq-question w-full flex justify-between items-center focus:outline-none">
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-sky-50 flex items-center justify-center mr-4">
-                                    <i class="fas fa-clock text-sky-500"></i>
+                    <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent" style="transition-delay: 0.3s;">
+                        <div>
+                            <button class="faq-toggle w-full flex justify-between items-center focus:outline-none" aria-expanded="false">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-sky-50 flex items-center justify-center mr-4">
+                                        <i class="fas fa-code text-sky-500"></i>
+                                    </div>
+                                    <span class="text-xl font-bold text-slate-800">What makes GenFlow different?</span>
                                 </div>
-                                <span class="text-xl font-bold text-slate-800">How long does it take to develop an AI solution?</span>
-                            </div>
-                            <i class="fas fa-chevron-down text-sky-500 transition-transform"></i>
-                        </button>
-                        <div class="faq-answer mt-6 text-slate-600 hidden pl-14">
-                            <p class="leading-relaxed">The timeline for developing an AI solution varies depending on the complexity of the project, the availability of data, and specific requirements. Simple MVP projects can be completed in as little as 4-6 weeks, while more complex enterprise solutions may take 3-6 months or longer. During our initial consultation, we'll provide a more accurate timeline based on your specific needs.</p>
+                                <i class="fas fa-chevron-down text-sky-500 transition-transform"></i>
+                            </button>
+                        </div>
+                        <div class="faq-panel mt-6 text-slate-600 hidden pl-14">
+                            <p class="leading-relaxed">GenFlow represents a breakthrough in integration development. Our AI agents can generate complete, production-ready webMethods code from natural language descriptions, reducing development time by up to 10x while maintaining enterprise-grade quality and TMF compliance.</p>
                         </div>
                     </div>
-                    
+
                     <!-- FAQ Item 5 -->
-                    <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent" style="transition-delay: 0.4s;">
-                        <button class="faq-question w-full flex justify-between items-center focus:outline-none">
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center mr-4">
-                                    <i class="fas fa-star text-indigo-500"></i>
+                    <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent" style="transition-delay: 0.4s;">
+                        <div>
+                            <button class="faq-toggle w-full flex justify-between items-center focus:outline-none" aria-expanded="false">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center mr-4">
+                                        <i class="fas fa-handshake text-indigo-500"></i>
+                                    </div>
+                                    <span class="text-xl font-bold text-slate-800">Do you provide ongoing support?</span>
                                 </div>
-                                <span class="text-xl font-bold text-slate-800">What sets Masna AI apart from other AI companies?</span>
-                            </div>
-                            <i class="fas fa-chevron-down text-indigo-500 transition-transform"></i>
-                        </button>
-                        <div class="faq-answer mt-6 text-slate-600 hidden pl-14">
-                            <p class="leading-relaxed">Masna AI stands out through our deep expertise in AI technologies, our focus on delivering practical business value, and our commitment to ethical AI development. We excel at bridging the gap between cutting-edge AI research and real-world business applications. Our team combines technical excellence with business acumen, ensuring that our solutions not only leverage the latest AI advancements but also align perfectly with your business goals and challenges.</p>
+                                <i class="fas fa-chevron-down text-indigo-500 transition-transform"></i>
+                            </button>
+                        </div>
+                        <div class="faq-panel mt-6 text-slate-600 hidden pl-14">
+                            <p class="leading-relaxed">Yes, we provide comprehensive post-deployment support including system monitoring, performance optimization, feature updates, and technical assistance. Our goal is to ensure your AI solutions continue to deliver value and adapt to your evolving business needs.</p>
                         </div>
                     </div>
                 </div>
@@ -886,30 +870,6 @@
             checkIfInView();
             window.addEventListener('scroll', checkIfInView);
             
-            // FAQ toggle functionality
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', () => {
-                    // Get the parent div that contains both the question and answer
-                    const faqItem = question.closest('div');
-                    
-                    // Find the answer div within this item
-                    const answer = faqItem.querySelector('.faq-answer');
-                    
-                    // Find the icon to rotate
-                    const icon = question.querySelector('i.fa-chevron-down');
-                    
-                    // Toggle the answer visibility
-                    answer.classList.toggle('hidden');
-                    
-                    // Rotate the icon when expanded
-                    if (!answer.classList.contains('hidden')) {
-                        icon.style.transform = 'rotate(180deg)';
-                    } else {
-                        icon.style.transform = 'rotate(0deg)';
-                    }
-                });
-            });
         };
     </script>        
 
