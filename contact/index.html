@@ -1,520 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
     <title>Contact Us - Masna AI</title>
-    <meta name="description" content="Contact Masna AI for inquiries about our AI solutions, including agentic applications, enterprise MCP services, and GenFlow AI agents.">
+    <meta name="description"
+        content="Contact Masna AI for inquiries about our AI solutions, including agentic applications, enterprise MCP services, and GenFlow AI agents.">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind.config.js"></script>
+    <script src="../tailwind.config.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-        
-        :root {
-            --primary-light: #38bdf8;
-            --primary: #0ea5e9;
-            --primary-dark: #0284c7;
-            --secondary-light: #a78bfa;
-            --secondary: #8b5cf6;
-            --secondary-dark: #7c3aed;
-            --accent-light: #5eead4;
-            --accent: #14b8a6;
-            --accent-dark: #0d9488;
-            --bg-light: #f8fafc;
-            --bg-white: #ffffff;
-        }
-        
-        /* Base Styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Manrope', sans-serif;
-        }
-        
-        /* Header Styles */
-        .bg-subtle {
-            background-color: var(--bg-light);
-            position: relative;
-        }
-        
-        .bg-subtle::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.05) 0%, rgba(255, 255, 255, 0) 70%), 
-                      radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
-            z-index: 0;
-        }
-        
-        .grid-pattern {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M96,95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-10,0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9zm10,0h9v-9h-9v9z' fill='%2364748b' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-            z-index: 1;
-            opacity: 0.3;
-        }
-        
-        .heading-badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background-color: #F1F5F9;
-            color: #64748B;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            margin-bottom: 1rem;
-        }
-        
-        @keyframes pulse-slow {
-            0%, 100% { opacity: 0.1; }
-            50% { opacity: 0.2; }
-        }
-        
-        .animate-pulse-slow {
-            animation: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        
-        /* Animation Styles */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .animate-on-scroll.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Card and Hover Effects */
-        .hover-card {
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hover-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-        }
-        
-        .hover-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(56, 189, 248, 0.1), rgba(124, 58, 237, 0.1));
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            pointer-events: none;
-        }
-        
-        .hover-card:hover::before {
-            opacity: 1;
-        }
-        
-        /* Text Gradients */
-        .text-gradient {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .text-gradient-alt {
-            background: linear-gradient(to right, var(--secondary), var(--accent));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        /* Glow Effects */
-        .glow {
-            position: relative;
-        }
-        
-        .glow::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 120%;
-            height: 120%;
-            border-radius: inherit;
-            background: inherit;
-            filter: blur(40px);
-            opacity: 0.15;
-            z-index: -1;
-            transition: opacity 0.4s ease;
-        }
-        
-        .glow:hover::after {
-            opacity: 0.25;
-        }
-        
-        /* Logo */
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 50px;
-            margin-right: 10px;
-            transition: transform 0.3s ease;
-        }
-        
-        .logo:hover img {
-            transform: scale(1.05);
-        }
-        
-        /* Form Inputs */
-        .form-input {
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .form-input:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
-        }
-        
-        /* Contact Card Icons */
-        .contact-icon {
-            transition: all 0.3s ease;
-        }
-        
-        .contact-card:hover .contact-icon {
-            transform: scale(1.1);
-        }
-        
-        /* Decorative line */
-        .decorative-line {
-            height: 3px;
-            background: linear-gradient(to right, var(--primary-light), var(--secondary));
-            border-radius: 3px;
-        }
-        
-        /* Sticky nav */
-        .sticky-nav {
-            position: sticky;
-            top: 0;
-            z-index: 40;
-            backdrop-filter: blur(8px);
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        }
-        
-        /* Toast Notification */
-        .toast-notification {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 16px 24px;
-            border-radius: 12px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: white;
-            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.5);
-            transform: translateY(100px);
-            opacity: 0;
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .toast-notification.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
     </style>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body class="antialiased bg-gray-50">
+
+<body class="antialiased bg-ai-dark text-gray-100">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="sticky top-0 z-50 bg-ai-dark/95 backdrop-blur-sm border-b border-white/10">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
                     <a href="/" class="logo">
-                        <img src="../assets/images/noBgBlack.png" alt="Masna AI Logo">
+                        <img src="../assets/images/noBgWhite.png" alt="Masna AI Logo" class="h-10">
                     </a>
                 </div>
-                
+
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
-                    <!-- <a href="/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">Home</a> -->
-                    <!-- <a href="/products/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">Products</a> -->
-                    <!-- <a href="/solutions/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">Solutions</a> -->
-                     <a href="/products/genflow/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">GenFlow</a>
-                    <a href="/about/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">About</a>
-                    <a href="/careers/" class="text-slate-700 hover:text-sky-600 transition-colors font-medium">Careers</a>
-                    <a href="/contact/" class="text-sky-600 font-medium">Contact</a>
+                    <a href="/" class="text-gray-300 hover:text-white transition-colors font-medium">Home</a>
+                    <a href="/products/"
+                        class="text-gray-300 hover:text-white transition-colors font-medium">Products</a>
+                    <a href="/solutions/"
+                        class="text-gray-300 hover:text-white transition-colors font-medium">Solutions</a>
+                    <a href="/careers/" class="text-gray-300 hover:text-white transition-colors font-medium">Careers</a>
+                    <a href="/about/" class="text-gray-300 hover:text-white transition-colors font-medium">About</a>
+                    <a href="/contact/" class="text-white font-medium">Contact</a>
                 </div>
-                
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="/contact/"
+                        class="inline-flex items-center px-4 py-2 bg-ai-primary text-white rounded-lg hover:bg-blue-600 transition-colors duration-200">Get
+                        Started</a>
+                </div>
+
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" type="button" class="text-slate-700 hover:text-sky-600 transition-all duration-300" aria-controls="mobile-menu" aria-expanded="false">
+                    <button id="mobile-menu-button" type="button"
+                        class="text-gray-300 hover:text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
-                        <i class="fas fa-bars text-2xl"></i>
+                        <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="md:hidden hidden">
-            <div class="space-y-1 px-4 pt-2 pb-3 sm:px-3">
-                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600">Home</a>
-                <a href="/products/" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600">Products</a>
-                <a href="/solutions/" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600">Solutions</a>
-                <a href="/about/" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600">About</a>
-                <a href="/careers/" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600">Careers</a>
-                <a href="/contact/" class="block px-3 py-2 rounded-md text-base font-medium bg-sky-50 text-sky-600">Contact</a>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Header Section -->
-    <header class="bg-subtle relative overflow-hidden py-20 md:py-28">
-        <!-- Grid pattern background -->
-        <div class="grid-pattern"></div>
-        
-        <!-- Glowing orbs -->
-        <div class="absolute opacity-10 w-96 h-96 rounded-full bg-sky-400 blur-[80px] top-10 left-1/4 animate-pulse-slow"></div>
-        <div class="absolute opacity-10 w-96 h-96 rounded-full bg-purple-500 blur-[80px] bottom-10 right-1/4 animate-pulse-slow" style="animation-delay: 2s"></div>
-        
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
-            <div class="text-center">
-                <span class="heading-badge">CONTACT US</span>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
-                    <span class="text-gradient">Contact</span> Us
-                </h1>
-                <p class="mt-6 max-w-2xl mx-auto text-xl text-slate-600">
-                    We'd love to hear from you. Let's discuss how Masna AI can help transform your business with cutting-edge AI solutions.
-                </p>
-                
-                <!-- Page Breadcrumbs -->
-                <div class="mt-10 inline-flex items-center py-1 px-3 rounded-full bg-white shadow-sm text-sm text-slate-600">
-                    <a href="/" class="hover:text-sky-500 transition-colors">Home</a>
-                    <i class="fas fa-chevron-right text-xs mx-2 text-slate-400"></i>
-                    <span class="text-sky-500 font-medium">Contact</span>
+            <div class="space-y-1 px-4 pt-2 pb-3 sm:px-3 bg-ai-dark border-t border-white/10">
+                <a href="/"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/5">Home</a>
+                <a href="/products/"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/5">Products</a>
+                <a href="/solutions/"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/5">Solutions</a>
+                <a href="/careers/"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/5">Careers</a>
+                <a href="/about/"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/5">About</a>
+                <a href="/contact/"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-white/10">Contact</a>
+                <div class="mt-4 pt-4 border-t border-white/10">
+                    <a href="/contact/"
+                        class="block w-full text-center px-4 py-2 bg-ai-primary text-white rounded-lg hover:bg-blue-600 transition-colors">Get
+                        Started</a>
                 </div>
             </div>
         </div>
-        
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-24 md:py-32">
+        <!-- Hero Glow & Grid -->
+        <div class="hero-glow"></div>
+        <div class="grid-pattern-ai absolute inset-0 opacity-30"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div
+                    class="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+                    GET IN TOUCH
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-white tracking-tight">
+                    Let's Build the <br>
+                    <span class="text-gradient-ai">Future Together</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-10 leading-relaxed">
+                    Ready to transform your enterprise with autonomous agents and specialized AI? Our team is here to
+                    help you navigate the journey.
+                </p>
+            </div>
+        </div>
+
         <!-- Bottom wave -->
-        <div class="absolute bottom-0 left-0 right-0 h-8 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI4MHB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTEyODAgMEw2NDAgNzAgMCAwdjE0MGgxMjgwVjB6IiBmaWxsLW9wYWNpdHk9Ii41Ii8+PHBhdGggZD0iTTEyODAgMEgwbDY0MCA3MEwxMjgwIDB6Ii8+PC9nPjwvc3ZnPg==')] bg-no-repeat bg-bottom bg-[length:100%_100%] opacity-50"></div>
-    </header>
-    
+        <div
+            class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent">
+        </div>
+    </section>
+
     <!-- Main Content -->
     <main>
         <!-- Contact Form Section -->
-        <section class="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
-            <!-- Background decorative elements -->
-            <div class="absolute inset-0 pointer-events-none overflow-hidden">
-                <div class="absolute top-1/4 right-0 w-1/3 h-1/3 bg-[radial-gradient(circle,rgba(56,189,248,0.06),transparent_60%)]"></div>
-                <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[radial-gradient(circle,rgba(124,58,237,0.04),transparent_60%)]"></div>
-            </div>
-            
+        <section class="py-20 md:py-28 bg-ai-dark relative overflow-hidden">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
-                <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
+                <div class="grid md:grid-cols-2 gap-16">
                     <!-- Contact Form -->
                     <div class="animate-on-scroll">
-                        <div class="bg-white p-8 md:p-10 rounded-3xl shadow-xl hover-card">
-                            <div class="inline-block px-4 py-1.5 rounded-full bg-sky-50 text-sky-600 font-medium mb-6 border border-sky-100">
-                                <span class="flex items-center">
-                                    <i class="fas fa-paper-plane text-lg mr-2"></i>
-                                    <span>Send a Message</span>
-                                </span>
+                        <div
+                            class="glass-panel p-8 md:p-10 rounded-2xl border border-white/10 relative overflow-hidden">
+                            <!-- Decorative elements -->
+                            <div
+                                class="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
                             </div>
-                        
-                            <h2 class="text-3xl font-bold mb-6 text-slate-800">Get in Touch</h2>
-                            <p class="text-slate-600 mb-8 leading-relaxed">
-                                Fill out the form below, and one of our AI experts will get back to you as soon as possible to discuss your needs.
+
+                            <h2 class="text-2xl font-bold mb-6 text-white">Send us a Message</h2>
+                            <p class="text-gray-400 mb-8 leading-relaxed">
+                                Fill out the form below, and one of our AI experts will get back to you as soon as
+                                possible.
                             </p>
-                            
-                            <form id="contact-form" class="space-y-6">
+
+                            <form id="contact-form" class="space-y-6 relative z-10">
                                 <!-- Success Message -->
-                                <div id="form-success" class="hidden bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 text-emerald-700 px-5 py-4 rounded-xl relative mb-6" role="alert">
+                                <div id="form-success"
+                                    class="hidden bg-green-500/10 border border-green-500/20 text-green-400 px-5 py-4 rounded-xl relative mb-6"
+                                    role="alert">
                                     <div class="flex items-center">
-                                        <i class="fas fa-check-circle text-emerald-500 mr-3 text-xl"></i>
+                                        <i class="fas fa-check-circle mr-3 text-xl"></i>
                                         <div>
                                             <strong class="font-bold">Message sent!</strong>
-                                            <span class="block sm:inline"> Thank you for contacting us. We'll be in touch shortly.</span>
+                                            <span class="block sm:inline"> We'll be in touch shortly.</span>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Name Input -->
                                 <div>
-                                    <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Name *</label>
-                                    <input type="text" name="name" id="name" class="form-input w-full px-4 py-3 rounded-xl bg-slate-50 border-slate-200 focus:border-sky-500 transition-all duration-300">
-                                    <p id="name-error" class="error-message mt-1 text-sm text-rose-600"></p>
+                                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name
+                                        *</label>
+                                    <input type="text" name="name" id="name"
+                                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300 placeholder-gray-500">
+                                    <p id="name-error" class="error-message mt-1 text-sm text-red-400"></p>
                                 </div>
-                                
+
                                 <!-- Email Input -->
                                 <div>
-                                    <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Email *</label>
-                                    <input type="email" name="email" id="email" class="form-input w-full px-4 py-3 rounded-xl bg-slate-50 border-slate-200 focus:border-sky-500 transition-all duration-300">
-                                    <p id="email-error" class="error-message mt-1 text-sm text-rose-600"></p>
+                                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email
+                                        *</label>
+                                    <input type="email" name="email" id="email"
+                                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300 placeholder-gray-500">
+                                    <p id="email-error" class="error-message mt-1 text-sm text-red-400"></p>
                                 </div>
-                                
+
                                 <!-- Phone Input -->
                                 <div>
-                                    <label for="phone" class="block text-sm font-medium text-slate-700 mb-2">Phone</label>
-                                    <input type="tel" name="phone" id="phone" class="form-input w-full px-4 py-3 rounded-xl bg-slate-50 border-slate-200 focus:border-sky-500 transition-all duration-300">
-                                    <p id="phone-error" class="error-message mt-1 text-sm text-rose-600"></p>
+                                    <label for="phone"
+                                        class="block text-sm font-medium text-gray-300 mb-2">Phone</label>
+                                    <input type="tel" name="phone" id="phone"
+                                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300 placeholder-gray-500">
+                                    <p id="phone-error" class="error-message mt-1 text-sm text-red-400"></p>
                                 </div>
-                                
+
                                 <!-- Message Input -->
                                 <div>
-                                    <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Message *</label>
-                                    <textarea name="message" id="message" rows="4" class="form-input w-full px-4 py-3 rounded-xl bg-slate-50 border-slate-200 focus:border-sky-500 transition-all duration-300"></textarea>
-                                    <p id="message-error" class="error-message mt-1 text-sm text-rose-600"></p>
+                                    <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message
+                                        *</label>
+                                    <textarea name="message" id="message" rows="4"
+                                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300 placeholder-gray-500"></textarea>
+                                    <p id="message-error" class="error-message mt-1 text-sm text-red-400"></p>
                                 </div>
-                                
+
                                 <div>
-                                    <button type="submit" class="w-full md:w-auto px-8 py-3.5 bg-gradient-to-r from-sky-500 to-sky-600 text-white rounded-xl font-medium hover:shadow-lg hover:translate-y-[-2px] inline-flex items-center transition-all duration-300">
+                                    <button type="submit"
+                                        class="w-full btn-ai-primary px-8 py-3.5 rounded-xl font-medium shadow-lg hover:shadow-blue-500/20 transition-all duration-300 flex items-center justify-center">
                                         <i class="fas fa-paper-plane mr-2"></i> Send Message
                                     </button>
                                 </div>
                             </form>
                         </div>
                     </div>
-                    
+
                     <!-- Contact Information -->
                     <div class="animate-on-scroll" style="transition-delay: 0.2s;">
-                        <!-- Contact Cards -->
-                        <div class="bg-white p-8 md:p-10 rounded-3xl shadow-xl hover-card mb-8">
-                            <div class="inline-block px-4 py-1.5 rounded-full bg-indigo-50 text-indigo-600 font-medium mb-6 border border-indigo-100">
-                                <span class="flex items-center">
-                                    <i class="fas fa-info-circle text-lg mr-2"></i>
-                                    <span>Reach Out</span>
-                                </span>
+                        <div
+                            class="glass-panel p-8 md:p-10 rounded-2xl border border-white/10 mb-8 relative overflow-hidden">
+                            <!-- Decorative elements -->
+                            <div
+                                class="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2">
                             </div>
-                        
-                            <h2 class="text-3xl font-bold mb-6 text-slate-800">Contact Information</h2>
-                            <p class="text-slate-600 mb-8 leading-relaxed">
-                                Prefer to reach out directly? Use any of the contact methods below to get in touch with our team.
+
+                            <h2 class="text-2xl font-bold mb-6 text-white">Contact Information</h2>
+                            <p class="text-gray-400 mb-8 leading-relaxed">
+                                Prefer to reach out directly? Use any of the contact methods below to get in touch with
+                                our team.
                             </p>
-                            
-                            <div class="space-y-8">
-                                <div class="flex items-start contact-card group">
+
+                            <div class="space-y-8 relative z-10">
+                                <div class="flex items-start group">
                                     <div class="flex-shrink-0">
-                                        <div class="flex items-center justify-center h-14 w-14 rounded-full bg-gradient-to-r from-sky-500 to-sky-600 text-white shadow-lg contact-icon group-hover:shadow-sky-200/50">
+                                        <div
+                                            class="flex items-center justify-center h-12 w-12 rounded-xl bg-blue-500/20 text-blue-400 border border-blue-500/30 group-hover:bg-blue-500/30 transition-colors">
                                             <i class="fas fa-map-marker-alt text-lg"></i>
                                         </div>
                                     </div>
                                     <div class="ml-5">
-                                        <h4 class="text-lg font-bold mb-1 text-slate-800 group-hover:text-sky-600 transition-colors">Location</h4>
-                                        <p class="text-slate-600">Riyadh, Saudi Arabia</p>
+                                        <h4
+                                            class="text-lg font-bold mb-1 text-white group-hover:text-blue-400 transition-colors">
+                                            Location</h4>
+                                        <p class="text-gray-400">Riyadh, Saudi Arabia</p>
                                     </div>
                                 </div>
-                                
-                                <div class="flex items-start contact-card group">
+
+                                <div class="flex items-start group">
                                     <div class="flex-shrink-0">
-                                        <div class="flex items-center justify-center h-14 w-14 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-600 text-white shadow-lg contact-icon group-hover:shadow-indigo-200/50">
+                                        <div
+                                            class="flex items-center justify-center h-12 w-12 rounded-xl bg-purple-500/20 text-purple-400 border border-purple-500/30 group-hover:bg-purple-500/30 transition-colors">
                                             <i class="fas fa-envelope text-lg"></i>
                                         </div>
                                     </div>
                                     <div class="ml-5">
-                                        <h4 class="text-lg font-bold mb-1 text-slate-800 group-hover:text-indigo-600 transition-colors">Email</h4>
-                                        <p class="text-slate-600">info@masna.ai</p>
+                                        <h4
+                                            class="text-lg font-bold mb-1 text-white group-hover:text-purple-400 transition-colors">
+                                            Email</h4>
+                                        <p class="text-gray-400">info@masna.ai</p>
                                     </div>
                                 </div>
-                                
-                                <div class="flex items-start contact-card group">
+
+                                <div class="flex items-start group">
                                     <div class="flex-shrink-0">
-                                        <div class="flex items-center justify-center h-14 w-14 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 text-white shadow-lg contact-icon group-hover:shadow-purple-200/50">
+                                        <div
+                                            class="flex items-center justify-center h-12 w-12 rounded-xl bg-teal-500/20 text-teal-400 border border-teal-500/30 group-hover:bg-teal-500/30 transition-colors">
                                             <i class="fas fa-phone-alt text-lg"></i>
                                         </div>
                                     </div>
                                     <div class="ml-5">
-                                        <h4 class="text-lg font-bold mb-1 text-slate-800 group-hover:text-purple-600 transition-colors">Phone</h4>
-                                        <p class="text-slate-600">+966 53 890 3547</p>
+                                        <h4
+                                            class="text-lg font-bold mb-1 text-white group-hover:text-teal-400 transition-colors">
+                                            Phone</h4>
+                                        <p class="text-gray-400">+966 53 890 3547</p>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Social Media -->
-                            <div class="mt-10">
-                                <h4 class="text-lg font-bold mb-5 text-slate-800">Connect With Us</h4>
+                            <div class="mt-10 pt-8 border-t border-white/10">
+                                <h4 class="text-lg font-bold mb-5 text-white">Connect With Us</h4>
                                 <div class="flex space-x-4">
-                                    <a href="https://www.linkedin.com/company/masna-ai/about/" class="w-12 h-12 rounded-full flex items-center justify-center bg-slate-100 text-slate-600 hover:bg-sky-500 hover:text-white hover:shadow-lg transition-all duration-300">
+                                    <a href="https://www.linkedin.com/company/masna-ai/about/"
+                                        class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-all duration-300 border border-white/10">
                                         <i class="fab fa-linkedin-in text-lg"></i>
                                     </a>
-                                    <a href="https://x.com/MasnaAi" class="w-12 h-12 rounded-full flex items-center justify-center bg-slate-100 text-slate-600 hover:bg-sky-500 hover:text-white hover:shadow-lg transition-all duration-300">
+                                    <a href="https://x.com/MasnaAi"
+                                        class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-all duration-300 border border-white/10">
                                         <i class="fab fa-twitter text-lg"></i>
                                     </a>
-                                    <a href="https://github.com/orgs/masna-ai" class="w-12 h-12 rounded-full flex items-center justify-center bg-slate-100 text-slate-600 hover:bg-sky-500 hover:text-white hover:shadow-lg transition-all duration-300">
+                                    <a href="https://github.com/orgs/masna-ai"
+                                        class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-gray-400 hover:bg-white/20 hover:text-white transition-all duration-300 border border-white/10">
                                         <i class="fab fa-github text-lg"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- Map Section -->
-        <section class="py-16 md:py-24 bg-white relative overflow-hidden">
-            <!-- Decorative elements -->
-            <div class="absolute inset-0 pointer-events-none overflow-hidden">
-                <div class="absolute top-1/2 left-0 w-1/4 h-1/4 bg-[radial-gradient(circle,rgba(56,189,248,0.1),transparent_70%)]"></div>
-                <div class="absolute top-0 right-0 w-1/4 h-1/3 bg-[radial-gradient(circle,rgba(139,92,246,0.08),transparent_70%)]"></div>
-            </div>
-            
+        <section class="py-16 md:py-24 relative overflow-hidden">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
-                <div class="text-center mb-16">
-                    <span class="px-4 py-1.5 bg-gradient-to-r from-sky-50 to-indigo-50 text-sky-600 rounded-full text-sm font-medium inline-block mb-4">LOCATION</span>
-                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Find <span class="text-gradient">Us</span></h2>
-                    <div class="max-w-2xl mx-auto">
-                        <p class="text-lg text-slate-600">
-                            Visit our location in Riyadh, Saudi Arabia to discuss your AI project in person.
-                        </p>
-                    </div>
-                    
-                    <!-- Decorative line -->
-                    <div class="w-24 h-1 bg-gradient-to-r from-sky-500 to-indigo-600 mx-auto mt-8 rounded-full"></div>
-                </div>
-                
-                <!-- Replace with actual Google Maps embed or iframe -->
-                <div class="rounded-2xl overflow-hidden shadow-xl animate-on-scroll hover:shadow-2xl transition-all duration-300 hover-card">
-                    <div class="bg-gradient-to-br from-slate-100 to-slate-200 h-96 w-full flex items-center justify-center relative">
-                        <div class="absolute inset-0 overflow-hidden opacity-10">
-                            <div class="absolute inset-0 bg-[url('https://img.freepik.com/free-vector/abstract-technology-particle-background_52683-25766.jpg')] bg-cover bg-center"></div>
+                <div class="glass-panel rounded-2xl overflow-hidden border border-white/10">
+                    <div class="bg-slate-800/50 h-96 w-full flex items-center justify-center relative">
+                        <!-- Abstract Map Background -->
+                        <div
+                            class="absolute inset-0 opacity-20 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]">
                         </div>
+
                         <div class="text-center p-8 relative z-10">
-                            <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                                <i class="fas fa-map-marked-alt text-4xl text-gradient"></i>
+                            <div
+                                class="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-blue-500/30 animate-pulse">
+                                <i class="fas fa-map-marked-alt text-4xl text-blue-400"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-3">Interactive Map</h3>
-                            <p class="text-slate-600 max-w-md mx-auto">
-                                This is a map placeholder. In the production version, this would be replaced with an actual Google Maps embed showing our Riyadh location.
+                            <h3 class="text-xl font-bold text-white mb-3">Riyadh, Saudi Arabia</h3>
+                            <p class="text-gray-400 max-w-md mx-auto mb-6">
+                                We are located in the heart of Riyadh's innovation district.
                             </p>
-                            <button class="mt-6 px-6 py-3 bg-gradient-to-r from-sky-500 to-sky-600 text-white rounded-xl font-medium hover:shadow-lg hover:translate-y-[-2px] inline-flex items-center transition-all duration-300">
+                            <button
+                                class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-medium border border-white/10 transition-all duration-300">
                                 <i class="fas fa-directions mr-2"></i> Get Directions
                             </button>
                         </div>
@@ -522,364 +310,216 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- FAQ Section -->
-        <section class="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
-            <!-- Decorative elements -->
-            <div class="absolute inset-0 pointer-events-none overflow-hidden">
-                <div class="absolute bottom-0 right-0 w-1/3 h-1/3 bg-[radial-gradient(circle,rgba(56,189,248,0.08),transparent_70%)]"></div>
-                <div class="absolute top-0 left-0 w-1/3 h-1/3 bg-[radial-gradient(circle,rgba(139,92,246,0.05),transparent_70%)]"></div>
-            </div>
-            
+        <section class="py-20 bg-ai-dark relative overflow-hidden">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
                 <div class="text-center mb-16">
-                    <span class="px-4 py-1.5 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-600 rounded-full text-sm font-medium inline-block mb-4">QUESTIONS & ANSWERS</span>
-                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Frequently Asked <span class="text-gradient">Questions</span></h2>
-                    <div class="max-w-2xl mx-auto">
-                        <p class="text-lg text-slate-600">
-                            Find answers to common questions about our AI solutions and technologies.
-                        </p>
-                    </div>
-                    
-                    <!-- Decorative line -->
-                    <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 mx-auto mt-8 rounded-full"></div>
+                    <h2 class="text-3xl font-bold text-white mb-4">Frequently Asked <span
+                            class="text-gradient-ai">Questions</span></h2>
+                    <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                        Find answers to common questions about our AI solutions and technologies.
+                    </p>
                 </div>
-                
+
                 <div class="space-y-6 max-w-4xl mx-auto">
                     <!-- FAQ Item 1 -->
-                    <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent">
-                        <div>
-                            <button class="faq-toggle w-full flex justify-between items-center focus:outline-none" aria-expanded="false">
-                                <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-sky-50 flex items-center justify-center mr-4">
-                                        <i class="fas fa-robot text-sky-500"></i>
-                                    </div>
-                                    <span class="text-xl font-bold text-slate-800">How do we get started?</span>
-                                </div>
-                                <i class="fas fa-chevron-down text-sky-500 transition-transform"></i>
-                            </button>
-                        </div>
-                        <div class="faq-panel mt-6 text-slate-600 hidden pl-14">
-                            <p class="leading-relaxed">Our team conducts a thorough assessment of your requirements, we create a detailed project roadmap and timeline, and begin development with iterative feedback cycles to ensure we're building exactly what you need.</p>
+                    <div class="glass-panel rounded-xl p-6 border border-white/10">
+                        <button class="faq-toggle w-full flex justify-between items-center focus:outline-none text-left"
+                            aria-expanded="false">
+                            <span class="text-lg font-bold text-white">How do we get started?</span>
+                            <i class="fas fa-chevron-down text-blue-400 transition-transform"></i>
+                        </button>
+                        <div class="faq-panel mt-4 text-gray-400 hidden">
+                            <p class="leading-relaxed">Our team conducts a thorough assessment of your requirements, we
+                                create a detailed project roadmap and timeline, and begin development with iterative
+                                feedback cycles to ensure we're building exactly what you need.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Item 2 -->
-                    <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent" style="transition-delay: 0.1s;">
-                        <div>
-                            <button class="faq-toggle w-full flex justify-between items-center focus:outline-none" aria-expanded="false">
-                                <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center mr-4">
-                                        <i class="fas fa-shield-alt text-indigo-500"></i>
-                                    </div>
-                                    <span class="text-xl font-bold text-slate-800">How do you ensure data security and privacy?</span>
-                                </div>
-                                <i class="fas fa-chevron-down text-indigo-500 transition-transform"></i>
-                            </button>
-                        </div>
-                        <div class="faq-panel mt-6 text-slate-600 hidden pl-14">
-                            <p class="leading-relaxed">Enterprise security is our top priority. All our solutions can run entirely on-premises or in your private cloud environment. We support deployment of local LLMs that never send data externally, ensuring complete data sovereignty and compliance with your security policies.</p>
+                    <div class="glass-panel rounded-xl p-6 border border-white/10">
+                        <button class="faq-toggle w-full flex justify-between items-center focus:outline-none text-left"
+                            aria-expanded="false">
+                            <span class="text-lg font-bold text-white">How do you ensure data security and
+                                privacy?</span>
+                            <i class="fas fa-chevron-down text-blue-400 transition-transform"></i>
+                        </button>
+                        <div class="faq-panel mt-4 text-gray-400 hidden">
+                            <p class="leading-relaxed">Enterprise security is our top priority. All our solutions can
+                                run entirely on-premises or in your private cloud environment. We support deployment of
+                                local LLMs that never send data externally, ensuring complete data sovereignty and
+                                compliance with your security policies.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Item 3 -->
-                    <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent" style="transition-delay: 0.2s;">
-                        <div>
-                            <button class="faq-toggle w-full flex justify-between items-center focus:outline-none" aria-expanded="false">
-                                <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center mr-4">
-                                        <i class="fas fa-server text-purple-500"></i>
-                                    </div>
-                                    <span class="text-xl font-bold text-slate-800">Can the solution be deployed locally?</span>
-                                </div>
-                                <i class="fas fa-chevron-down text-purple-500 transition-transform"></i>
-                            </button>
-                        </div>
-                        <div class="faq-panel mt-6 text-slate-600 hidden pl-14">
-                            <p class="leading-relaxed">Absolutely. Our solutions are designed for flexible deployment options including fully on-premises installation. This ensures your data never leaves your infrastructure while still providing access to powerful AI capabilities.</p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 4 -->
-                    <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent" style="transition-delay: 0.3s;">
-                        <div>
-                            <button class="faq-toggle w-full flex justify-between items-center focus:outline-none" aria-expanded="false">
-                                <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-sky-50 flex items-center justify-center mr-4">
-                                        <i class="fas fa-code text-sky-500"></i>
-                                    </div>
-                                    <span class="text-xl font-bold text-slate-800">What makes GenFlow different?</span>
-                                </div>
-                                <i class="fas fa-chevron-down text-sky-500 transition-transform"></i>
-                            </button>
-                        </div>
-                        <div class="faq-panel mt-6 text-slate-600 hidden pl-14">
-                            <p class="leading-relaxed">GenFlow represents a breakthrough in integration development. Our AI agents can generate complete, production-ready webMethods code from natural language descriptions, reducing development time by up to 10x while maintaining enterprise-grade quality and TMF compliance.</p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 5 -->
-                    <div class="bg-white rounded-2xl shadow-lg p-5 sm:p-6 animate-on-scroll hover-card hover:border-sky-100 transition-all duration-300 border border-transparent" style="transition-delay: 0.4s;">
-                        <div>
-                            <button class="faq-toggle w-full flex justify-between items-center focus:outline-none" aria-expanded="false">
-                                <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center mr-4">
-                                        <i class="fas fa-handshake text-indigo-500"></i>
-                                    </div>
-                                    <span class="text-xl font-bold text-slate-800">Do you provide ongoing support?</span>
-                                </div>
-                                <i class="fas fa-chevron-down text-indigo-500 transition-transform"></i>
-                            </button>
-                        </div>
-                        <div class="faq-panel mt-6 text-slate-600 hidden pl-14">
-                            <p class="leading-relaxed">Yes, we provide comprehensive post-deployment support including system monitoring, performance optimization, feature updates, and technical assistance. Our goal is to ensure your AI solutions continue to deliver value and adapt to your evolving business needs.</p>
+                    <div class="glass-panel rounded-xl p-6 border border-white/10">
+                        <button class="faq-toggle w-full flex justify-between items-center focus:outline-none text-left"
+                            aria-expanded="false">
+                            <span class="text-lg font-bold text-white">Can the solution be deployed locally?</span>
+                            <i class="fas fa-chevron-down text-blue-400 transition-transform"></i>
+                        </button>
+                        <div class="faq-panel mt-4 text-gray-400 hidden">
+                            <p class="leading-relaxed">Absolutely. Our solutions are designed for flexible deployment
+                                options including fully on-premises installation. This ensures your data never leaves
+                                your infrastructure while still providing access to powerful AI capabilities.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <!-- Footer -->
-    <footer class="bg-slate-900 text-white pt-16 pb-8 relative overflow-hidden">
-        <!-- Decorative elements -->
-        <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-10">
-            <div class="absolute top-0 left-0 w-full h-full bg-[url('https://img.freepik.com/free-vector/abstract-technology-particle-background_52683-25766.jpg')] bg-cover bg-center"></div>
-            <div class="absolute -top-[10%] -right-[10%] w-[50%] h-[50%] bg-[radial-gradient(circle,rgba(56,189,248,0.4),transparent_70%)])"></div>
-            <div class="absolute -bottom-[10%] -left-[10%] w-[50%] h-[50%] bg-[radial-gradient(circle,rgba(139,92,246,0.4),transparent_70%)]"></div>
-        </div>
-        
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
-                <!-- Company Info -->
-                <div>
-                    <div class="mb-6">
-                        <img src="../assets/images/noBgWhite.png" alt="Masna AI" class="h-10">
+    <footer class="bg-ai-dark border-t border-white/10 text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../assets/images/noBgWhite.png" alt="Masna AI" class="h-8 mr-3">
                     </div>
-                    <p class="text-slate-300 mb-6 leading-relaxed">
-                        Leading the future with innovative AI solutions that transform businesses and drive growth.
-                    </p>
-                    <p class="flex items-center text-slate-300">
-                        <i class="fas fa-map-marker-alt text-sky-400 mr-3"></i>
+                    <p class="text-gray-400 mb-4">Leading AI solutions for enterprises. We build intelligent agents,
+                        enterprise MCP solutions, and GenFlow with leading model providers.</p>
+                    <p class="text-gray-400 flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-400 mr-2"></i>
                         Riyadh, Saudi Arabia
                     </p>
                 </div>
-                
-                <!-- Quick Links -->
+
                 <div>
-                    <h4 class="text-lg font-bold mb-6 text-white relative inline-block">
-                        <span class="relative z-10">Quick Links</span>
-                        <span class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-sky-400 to-indigo-400"></span>
-                    </h4>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="/" class="text-slate-300 hover:text-white hover:translate-x-1 flex items-center transition-all duration-300">
-                                <i class="fas fa-chevron-right text-xs text-sky-400 mr-2"></i>
-                                Home
-                            </a>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/products/" class="text-gray-400 hover:text-white transition-colors">Products</a>
                         </li>
-                        <li>
-                            <a href="/products/" class="text-slate-300 hover:text-white hover:translate-x-1 flex items-center transition-all duration-300">
-                                <i class="fas fa-chevron-right text-xs text-sky-400 mr-2"></i>
-                                Products
-                            </a>
+                        <li><a href="/solutions/" class="text-gray-400 hover:text-white transition-colors">Solutions</a>
                         </li>
-                        <li>
-                            <a href="/solutions/" class="text-slate-300 hover:text-white hover:translate-x-1 flex items-center transition-all duration-300">
-                                <i class="fas fa-chevron-right text-xs text-sky-400 mr-2"></i>
-                                Solutions
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/about/" class="text-slate-300 hover:text-white hover:translate-x-1 flex items-center transition-all duration-300">
-                                <i class="fas fa-chevron-right text-xs text-sky-400 mr-2"></i>
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/contact/" class="text-slate-300 hover:text-white hover:translate-x-1 flex items-center transition-all duration-300">
-                                <i class="fas fa-chevron-right text-xs text-sky-400 mr-2"></i>
-                                Contact
-                            </a>
+                        <li><a href="/about/" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="/contact/" class="text-gray-400 hover:text-white transition-colors">Contact</a>
                         </li>
                     </ul>
                 </div>
-                
-                <!-- Products -->
+
                 <div>
-                    <h4 class="text-lg font-bold mb-6 text-white relative inline-block">
-                        <span class="relative z-10">Products</span>
-                        <span class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-sky-400 to-indigo-400"></span>
-                    </h4>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="/products/#codesage" class="text-slate-300 hover:text-white hover:translate-x-1 flex items-center transition-all duration-300">
-                                <i class="fas fa-chevron-right text-xs text-sky-400 mr-2"></i>
-                                CodeSage
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/products/#genflow" class="text-slate-300 hover:text-white hover:translate-x-1 flex items-center transition-all duration-300">
-                                <i class="fas fa-chevron-right text-xs text-sky-400 mr-2"></i>
-                                GenFlow
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/products/#mockgee" class="text-slate-300 hover:text-white hover:translate-x-1 flex items-center transition-all duration-300">
-                                <i class="fas fa-chevron-right text-xs text-sky-400 mr-2"></i>
-                                Mockgee
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Connect -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-white relative inline-block">
-                        <span class="relative z-10">Connect With Us</span>
-                        <span class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-sky-400 to-indigo-400"></span>
-                    </h4>
-                    <div class="flex space-x-3 mb-8">
-                        <a href="https://www.linkedin.com/company/masna-ai/about/" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-sky-600/20">
-                            <i class="fab fa-linkedin-in text-white"></i>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/masna-ai"
+                            class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://x.com/MasnaAi" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-sky-600/20">
-                            <i class="fab fa-twitter text-white"></i>
+                        <a href="https://x.com/MasnaAi"
+                            class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://github.com/orgs/masna-ai" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-sky-600/20">
-                            <i class="fab fa-github text-white"></i>
+                        <a href="https://github.com/orgs/masna-ai"
+                            class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-400 hover:bg-white/20 hover:text-white transition-colors">
+                            <i class="fab fa-github"></i>
                         </a>
-                    </div>
-                    
-                    <h4 class="text-base font-bold mb-4 text-white">Subscribe to Our Newsletter</h4>
-                    <div class="relative">
-                        <input type="email" placeholder="Your email address" class="w-full bg-slate-800 border border-slate-700 rounded-lg py-3 px-4 text-white text-sm focus:outline-none focus:border-sky-500 transition-all duration-300">
-                        <button class="absolute right-1.5 top-1.5 bg-gradient-to-r from-sky-500 to-sky-600 text-white rounded-md px-3 py-1.5 text-xs font-medium hover:shadow-lg transition-all duration-300">
-                            Subscribe
-                        </button>
                     </div>
                 </div>
             </div>
-            
-            <div class="border-t border-slate-800 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-slate-400 mb-4 md:mb-0">&copy; 2023 Masna AI. All rights reserved.</p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-slate-400 hover:text-white transition-all duration-300">Privacy Policy</a>
-                        <a href="#" class="text-slate-400 hover:text-white transition-all duration-300">Terms of Service</a>
-                    </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">&copy; 2025 Masna AI. All rights reserved.</p>
+                <div class="flex space-x-4 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
-    
+
     <!-- JavaScript -->
     <script src="../assets/js/main.js"></script>
-    
-    <!-- Contact Form Handling and FAQ Section -->
+
+    <!-- Contact Form Handling -->
     <script>
         window.onload = function () {
             const form = document.getElementById('contact-form');
-            const toast = document.getElementById('toast');
-        
-            // Loader element
-            const loader = document.createElement('div');
-            loader.className = 'fixed inset-0 bg-white bg-opacity-50 z-50 flex items-center justify-center hidden';
-            loader.innerHTML = `<div class="animate-spin rounded-full h-12 w-12 border-t-4 border-sky-500 border-opacity-75"></div>`;
-            document.body.appendChild(loader);
-        
-            const showError = (id, message) => {
-                const errorElem = document.getElementById(id + '-error');
-                if (errorElem) errorElem.innerText = message;
-            };
-        
-            const clearErrors = () => {
-                ['name', 'email', 'message'].forEach(id => showError(id, ''));
-            };
-        
-            const validateEmail = email =>
-                /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        
-            if (form) {
-                form.onsubmit = async function (event) {
-                    event.preventDefault();
-                    clearErrors();
-        
-                    const name = document.getElementById('name').value.trim();
-                    const email = document.getElementById('email').value.trim();
-                    const message = document.getElementById('message').value.trim();
-                    const phone = document.getElementById('phone').value.trim();
-        
-                    let hasError = false;
-        
-                    if (!name) {
-                        showError('name', 'Name is required.');
-                        hasError = true;
-                    }
-        
-                    if (!email) {
-                        showError('email', 'Email is required.');
-                        hasError = true;
-                    } else if (!validateEmail(email)) {
-                        showError('email', 'Please enter a valid email address.');
-                        hasError = true;
-                    }
-        
-                    if (!message) {
-                        showError('message', 'Message is required.');
-                        hasError = true;
-                    }
-        
-                    if (hasError) return;
-        
-                    // Show loader
-                    loader.classList.remove('hidden');
-        
-                    try {
-                        const response = await fetch('https://masna-form-submission-572006272072.me-central1.run.app', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ name, email, phoneNumber: phone, message })
-                        });
-        
-                        if (response.ok) {
-                            toast.classList.add('show');
-                            form.reset();
-                            setTimeout(() => toast.classList.remove('show'), 5000);
-                        } else {
-                            alert('Something went wrong. Please try again.');
-                        }
-                    } catch (err) {
-                        console.error(err);
-                        alert('An error occurred. Please check your network or try later.');
-                    } finally {
-                        loader.classList.add('hidden');
-                    }
-                };
+            const successMsg = document.getElementById('form-success');
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
             }
-        
-            // Animate on scroll
-            const animateElements = document.querySelectorAll('.animate-on-scroll');
-            function checkIfInView() {
-                animateElements.forEach(el => {
-                    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-                        el.classList.add('active');
+
+            // FAQ Accordion
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const panel = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('.fa-chevron-down');
+
+                    // Toggle current panel
+                    panel.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+
+                    // Update aria-expanded
+                    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', !isExpanded);
+                });
+            });
+
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Simple validation
+                    let isValid = true;
+                    const name = document.getElementById('name');
+                    const email = document.getElementById('email');
+                    const message = document.getElementById('message');
+
+                    // Reset errors
+                    document.querySelectorAll('.error-message').forEach(el => el.innerText = '');
+
+                    if (!name.value.trim()) {
+                        document.getElementById('name-error').innerText = 'Name is required';
+                        isValid = false;
+                    }
+
+                    if (!email.value.trim()) {
+                        document.getElementById('email-error').innerText = 'Email is required';
+                        isValid = false;
+                    } else if (!/\S+@\S+\.\S+/.test(email.value)) {
+                        document.getElementById('email-error').innerText = 'Please enter a valid email';
+                        isValid = false;
+                    }
+
+                    if (!message.value.trim()) {
+                        document.getElementById('message-error').innerText = 'Message is required';
+                        isValid = false;
+                    }
+
+                    if (isValid) {
+                        // Simulate form submission
+                        const btn = form.querySelector('button[type="submit"]');
+                        const originalText = btn.innerHTML;
+                        btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+                        btn.disabled = true;
+
+                        setTimeout(() => {
+                            form.reset();
+                            successMsg.classList.remove('hidden');
+                            btn.innerHTML = originalText;
+                            btn.disabled = false;
+
+                            // Hide success message after 5 seconds
+                            setTimeout(() => {
+                                successMsg.classList.add('hidden');
+                            }, 5000);
+                        }, 1500);
                     }
                 });
             }
-            checkIfInView();
-            window.addEventListener('scroll', checkIfInView);
-            
         };
-    </script>        
-
-    <!-- Add this before closing body tag -->
-    <div id="toast" class="toast-notification" role="alert">
-        <i class="fas fa-check-circle text-xl"></i>
-        <div>
-            <h4 class="font-bold">Success!</h4>
-            <p>Your message has been sent successfully.</p>
-        </div>
-    </div>
+    </script>
 </body>
+
 </html>

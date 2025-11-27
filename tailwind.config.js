@@ -28,10 +28,15 @@ tailwind.config = {
           800: '#5B21B6',
           900: '#4C1D95',
         },
+        ai: {
+          dark: '#0B0F19',
+          card: 'rgba(255, 255, 255, 0.03)',
+          border: 'rgba(255, 255, 255, 0.08)',
+        }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Manrope', 'sans-serif'],
+        sans: ['Outfit', 'Inter', 'sans-serif'],
+        display: ['Outfit', 'Manrope', 'sans-serif'],
       },
     },
   },
