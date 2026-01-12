@@ -1,26 +1,51 @@
 /* Masna AI - Modern AI Theme Styles */
 
 /* 1. Core Variables & Defaults */
+/* 1. Core Variables & Defaults */
+/* 1. Core Variables & Defaults */
 :root {
-  --ai-bg-dark: #0B0F19;
-  --ai-bg-card: rgba(255, 255, 255, 0.03);
-  --ai-border: rgba(255, 255, 255, 0.08);
-  --ai-primary: #3B82F6;
-  --ai-accent: #8B5CF6;
-  --ai-glow: rgba(59, 130, 246, 0.5);
+  /* Light Mode Defaults - Always Active */
+  --ai-bg-main: #FDFDFD;
+  /* Slightly off-white for premium feel */
+  --ai-text-main: #0F172A;
+  /* Slate 900 */
+  --ai-text-muted: #475569;
+  /* Slate 600 */
+  --ai-bg-card: rgba(255, 255, 255, 0.6);
+  /* Higher opacity for visibility */
+  --ai-border: rgba(0, 0, 0, 0.08);
+  /* Darker border for contrast */
+  --ai-primary: #2563EB;
+  /* Blue 600 - slightly darker for white bg */
+  --ai-accent: #7C3AED;
+  /* Violet 600 */
+  /* Tweaked Glows for Light Mode */
+  --ai-glow: rgba(37, 99, 235, 0.2);
+  --ai-glass-hover: rgba(255, 255, 255, 0.9);
+  /* Stronger shadows for depth on light */
+  --ai-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
+/* Removed .dark block */
+
 body {
-  background-color: var(--ai-bg-dark);
-  color: #F1F5F9;
+  background-color: var(--ai-bg-main);
+  color: var(--ai-text-main);
   font-family: 'Outfit', sans-serif;
   overflow-x: hidden;
+  /* Removed transition since no theme switch */
 }
 
 /* 2. Typography Overrides */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Outfit', sans-serif;
   letter-spacing: -0.02em;
+  color: var(--ai-text-main);
 }
 
 /* 3. Background Effects */
@@ -62,49 +87,97 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes float-glow {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(30px, -30px) scale(1.1); }
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
 }
 
 .grid-pattern-ai {
   background-size: 40px 40px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+}
+
+.dark .grid-pattern-ai {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
 /* 4. Glassmorphism Components */
 .glass-panel {
   background: var(--ai-bg-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--ai-border);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--ai-shadow);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: 0.5s;
+}
+
+.glass-panel:hover::before {
+  left: 100%;
 }
 
 .glass-panel:hover {
-  border-color: rgba(59, 130, 246, 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 40px -10px rgba(59, 130, 246, 0.15);
-  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(59, 130, 246, 0.4);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.2), 0 0 15px rgba(59, 130, 246, 0.1);
+  background: var(--ai-glass-hover);
 }
 
 /* 5. Text Effects */
 .text-gradient-ai {
-  background: linear-gradient(135deg, #60A5FA 0%, #A78BFA 50%, #2DD4BF 100%);
+  background: linear-gradient(135deg, #60A5FA 0%, #C084FC 50%, #2DD4BF 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% 200%;
-  animation: gradient-shift 5s ease infinite;
+  animation: gradient-shift 6s ease infinite;
+  text-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
 }
 
 @keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Scroll Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* 6. Button Styles */
