@@ -1,34 +1,35 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Mobile menu toggle
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
-  
+
+  // Mobile Menu Toggle
   if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', function() {
+    mobileMenuButton.addEventListener('click', function () {
       const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
       mobileMenuButton.setAttribute('aria-expanded', !expanded);
       mobileMenu.classList.toggle('hidden');
     });
   }
 
-  // Add scroll animations
-  const animatedElements = document.querySelectorAll('.animate-on-scroll');
-  
-  function checkScroll() {
-    animatedElements.forEach(el => {
-      const elementTop = el.getBoundingClientRect().top;
-      const elementVisible = 150;
-      
-      if (elementTop < window.innerHeight - elementVisible) {
-        el.classList.add('active');
+  // Add scroll animations using Intersection Observer
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target); // Only animate once
       }
     });
-  }
-  
-  // Initial check on load
-  window.addEventListener('load', checkScroll);
-  // Check on scroll
-  window.addEventListener('scroll', checkScroll);
+  }, observerOptions);
+
+  const animatedElements = document.querySelectorAll('.reveal-on-scroll');
+  animatedElements.forEach(el => observer.observe(el));
 
   // FAQ accordion toggles
   const faqToggles = document.querySelectorAll('.faq-toggle');
