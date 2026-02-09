@@ -1,0 +1,70 @@
+/* Liquid Header Styles */
+.liquid-header {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 100px;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.liquid-header.scrolled {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.liquid-nav-link {
+    position: relative;
+    color: #4b5563;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border-radius: 99px;
+    transition: all 0.2s ease;
+}
+
+.liquid-nav-link:hover {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.08);
+}
+
+.liquid-cta {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 99px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    transition: all 0.3s ease;
+}
+
+.liquid-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+/* Ensure content doesn't get hidden behind the floating header */
+body {
+    padding-top: 0 !important;
+    /* Reset any existing padding */
+}
+
+/* Mobile Liquid Header adjustments */
+@media (max-width: 768px) {
+    .liquid-header {
+        width: 95%;
+        top: 1rem;
+        padding: 0.75rem 1.25rem;
+        border-radius: 20px;
+        /* Slightly less rounded on mobile to fit menu if needed, or keep pill */
+    }
+}

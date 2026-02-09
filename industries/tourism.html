@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+    <title>AI in Tourism - Masna AI</title>
+    <meta name="description"
+        content="Revolutionizing the tourism industry with AI-driven personalized experiences, smart destination management, and operational efficiency.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind.config.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="antialiased bg-main text-main">
+    <!-- Navigation -->
+    <nav class="liquid-header z-50">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="/" class="logo flex items-center gap-2">
+                    <img src="../assets/images/noBgColor.png" alt="Masna AI Logo" class="h-8">
+                    
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center gap-1">
+ 
+                <a href="/products/" class="liquid-nav-link">Products</a>
+                <a href="/solutions/" class="liquid-nav-link">Solutions</a>
+ 
+                <a href="/about/" class="liquid-nav-link">Company</a>
+                <a href="/contact/" class="liquid-nav-link">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+
+                <!-- CTA Button -->
+                <a href="/contact/" class="liquid-cta hidden md:inline-flex items-center">
+                    Get Started
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" type="button"
+                        class="text-gray-600 hover:text-blue-600 p-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu"
+            class="lg:hidden hidden mt-4 bg-white/95 backdrop-blur-md rounded-2xl border border-gray-100 shadow-xl overflow-hidden">
+            <div class="space-y-1 px-4 pt-2 pb-3">
+                <a href="/"
+                    class="block px-3 py-2 rounded-lg text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Home</a>
+                <a href="/products/"
+                    class="block px-3 py-2 rounded-lg text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Products</a>
+                <a href="/solutions/"
+                    class="block px-3 py-2 rounded-lg text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Solutions</a>
+                <a href="/about/"
+                    class="block px-3 py-2 rounded-lg text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Company</a>
+                <div class="mt-4 pt-4 border-t border-gray-100">
+                    <a href="/contact/"
+                        class="block w-full text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">Get
+                        Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-24 md:py-32">
+        <div class="hero-glow"></div>
+        <div class="grid-pattern-ai absolute inset-0 opacity-30"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div
+                    class="inline-block px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-600 text-sm font-medium mb-6">
+                    INDUSTRY FOCUS: TOURISM
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-gray-900 tracking-tight">
+                    Reimagining Travel with <br>
+                    <span class="text-gradient-ai">Intelligent Experiences</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-10 leading-relaxed">
+                    From personalized itinerary planning to smart destination management, we empower the tourism sector
+                    with data-driven AI solutions.
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="/contact/"
+                        class="btn-ai-primary inline-flex items-center px-8 py-3.5 rounded-xl shadow-lg">
+                        Transform Your Services
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="py-20 bg-gray-50 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Smart Assistants -->
+                <div class="glass-panel p-8 rounded-2xl reveal-on-scroll">
+                    <div class="w-14 h-14 bg-orange-600/20 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-comment-dots text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Personalized Travel Agents</h3>
+                    <p class="text-gray-600 mb-6">AI concierge agents that plan itineraries, book services, and provide
+                        real-time recommendations based on traveler preferences.</p>
+                </div>
+
+                <!-- Destination Management -->
+                <div class="glass-panel p-8 rounded-2xl reveal-on-scroll" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-map-marked-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Smart Destination Management</h3>
+                    <p class="text-gray-600 mb-6">Optimize crowd flow, resource allocation, and infrastructure usage
+                        with predictive analytics and vision AI.</p>
+                </div>
+
+                <!-- Sentiment Analysis -->
+                <div class="glass-panel p-8 rounded-2xl reveal-on-scroll" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-green-600/20 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-smile text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Sentiment & Feedback Analysis</h3>
+                    <p class="text-gray-600 mb-6">Analyze guest reviews and social media in real-time to improve service
+                        quality and address concerns instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t border-gray-200 text-gray-600 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../assets/images/noBgColor.png" alt="Masna AI" class="h-8 mr-3">
+                    </div>
+                    <p class="text-gray-600 mb-4">Leading AI solutions for enterprises. We build intelligent agents,
+                        enterprise MCP solutions, and GenFlow with leading model providers.</p>
+                    <p class="text-gray-600 flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>
+                        Building No. 44, Ibn Katheer St, King Abdul Aziz, Riyadh 13334
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-900">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a></li>
+                        <li><a href="/products/" class="text-gray-600 hover:text-blue-600 transition-colors">Products</a></li>
+                        <li><a href="/solutions/" class="text-gray-600 hover:text-blue-600 transition-colors">Solutions</a></li>
+                        <li><a href="/about/" class="text-gray-600 hover:text-blue-600 transition-colors">Company</a></li>
+                        <li><a href="/contact/" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-900">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/masna-ai"
+                            class="w-10 h-10 rounded-lg bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/MasnaAi"
+                            class="w-10 h-10 rounded-lg bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/orgs/masna-ai"
+                            class="w-10 h-10 rounded-lg bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-300 hover:text-gray-900 transition-colors"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">&copy; 2026 Masna AI. All rights reserved.</p>
+                <div class="flex space-x-4 text-sm text-gray-500">
+                    <a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-blue-600 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
