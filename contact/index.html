@@ -138,6 +138,19 @@
                                     </div>
                                 </div>
 
+                                <!-- Error Message -->
+                                <div id="form-error"
+                                    class="hidden bg-red-500/10 border border-red-500/20 text-red-500 px-5 py-4 rounded-xl relative mb-6"
+                                    role="alert">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-exclamation-circle mr-3 text-xl"></i>
+                                        <div>
+                                            <strong class="font-bold">Message not sent.</strong>
+                                            <span id="form-error-text" class="block sm:inline"> Please try again.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <!-- Name Input -->
                                 <div>
                                     <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name
@@ -423,6 +436,9 @@
         window.onload = function () {
             const form = document.getElementById('contact-form');
             const successMsg = document.getElementById('form-success');
+            const errorMsg = document.getElementById('form-error');
+            const errorText = document.getElementById('form-error-text');
+            const notificationEndpoint = 'https://masna-notification-23987395973.me-central1.run.app';
 
             // Mobile menu toggle
             const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -452,7 +468,7 @@
             });
 
             if (form) {
-                form.addEventListener('submit', function (e) {
+                form.addEventListener('submit', async function (e) {
                     e.preventDefault();
 
                     // Simple validation
@@ -483,23 +499,49 @@
                     }
 
                     if (isValid) {
-                        // Simulate form submission
                         const btn = form.querySelector('button[type="submit"]');
                         const originalText = btn.innerHTML;
+                        const phone = document.getElementById('phone');
+
+                        successMsg.classList.add('hidden');
+                        errorMsg.classList.add('hidden');
                         btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
                         btn.disabled = true;
 
-                        setTimeout(() => {
+                        try {
+                            const response = await fetch(notificationEndpoint, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Accept': 'application/json'
+                                },
+                                body: JSON.stringify({
+                                    name: name.value.trim(),
+                                    phoneNumber: phone.value.trim(),
+                                    email: email.value.trim(),
+                                    message: message.value.trim()
+                                })
+                            });
+
+                            if (!response.ok) {
+                                throw new Error(`Request failed with status ${response.status}`);
+                            }
+
                             form.reset();
                             successMsg.classList.remove('hidden');
-                            btn.innerHTML = originalText;
-                            btn.disabled = false;
 
                             // Hide success message after 5 seconds
                             setTimeout(() => {
                                 successMsg.classList.add('hidden');
                             }, 5000);
-                        }, 1500);
+                        } catch (error) {
+                            console.error('Contact form submission failed:', error);
+                            errorText.innerText = 'Please try again in a moment.';
+                            errorMsg.classList.remove('hidden');
+                        } finally {
+                            btn.innerHTML = originalText;
+                            btn.disabled = false;
+                        }
                     }
                 });
             }
