@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+    <title>Consultancy - Integration, API & AI Engineering | Masna AI</title>
+    <meta name="description"
+        content="Enterprise consultancy for integration, API management and AI engineering. Explore platform expertise, managed services and flexible delivery teams with Masna AI.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind.config.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="antialiased bg-main text-main">
+        <!-- Navigation -->
+    <nav class="liquid-header z-50">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="/" class="logo flex items-center gap-2">
+                    <img src="../assets/images/noBgBlack.png" alt="Masna AI Logo" class="h-8">
+                    
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center gap-1">
+ 
+                <a href="/products/" class="liquid-nav-link">Products</a>
+                <a href="/solutions/" class="liquid-nav-link">Solutions</a>
+                <a href="/consultancy/" aria-current="page" class="liquid-nav-link">Consultancy</a>
+ 
+                <a href="/about/" class="liquid-nav-link">Company</a>
+                <a href="/contact/" class="liquid-nav-link">Contact</a>
+            
+            </div>
+
+            <div class="flex items-center gap-4">
+                <!-- CTA Button -->
+                <a href="/contact/" class="liquid-cta hidden md:inline-flex items-center">
+                    Get Started
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" type="button"
+                        class="text-gray-600 hover:text-blue-600 p-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="lg:hidden hidden mt-4 bg-white/95 backdrop-blur-md rounded-2xl border border-gray-100 shadow-xl overflow-hidden">
+            <div class="space-y-1 px-4 pt-2 pb-3">
+                <a href="/" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Home</a>
+                <a href="/products/" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Products</a>
+                <a href="/solutions/" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Solutions</a>
+                <a href="/consultancy/" aria-current="page" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Consultancy</a>
+                <a href="/about/" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Company</a>
+                <div class="mt-4 pt-4 border-t border-gray-100">
+                    <a href="/contact/" class="block w-full text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+    <section class="relative overflow-hidden py-24 md:py-32" aria-labelledby="consultancy-title">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="grid-pattern-ai absolute inset-0 opacity-30" aria-hidden="true"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 text-sm font-medium mb-6">ENTERPRISE CONSULTANCY</p>
+                <h1 id="consultancy-title" class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight tracking-tight">Expertise for your platforms.<br><span class="text-gradient-ai">Capacity for your ambitions.</span></h1>
+                <p class="text-xl text-gray-600 mb-10 leading-relaxed">Integration, API management and AI engineering professionals embedded with your teams — from architecture and modernization to production delivery and managed operations.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/contact/" class="btn-ai-primary inline-flex items-center px-8 py-4 rounded-xl font-semibold">Discuss Your Requirements <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i></a>
+                    <a href="#expertise" class="btn-ai-secondary inline-flex items-center px-8 py-4 rounded-xl font-semibold">Explore Our Expertise</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="expertise" class="py-20 bg-gray-50" aria-labelledby="expertise-title">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <div class="max-w-3xl mb-12">
+                <p class="text-blue-600 font-semibold mb-3">FROM ARCHITECTURE TO OPERATIONS</p>
+                <h2 id="expertise-title" class="text-3xl md:text-4xl font-bold mb-5">The expertise to move forward</h2>
+                <p class="text-lg text-gray-600">Strengthen your delivery team with specialists who connect enterprise systems, govern APIs and bring AI into real business workflows.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <article class="glass-panel bg-white p-8 rounded-2xl">
+                    <p class="text-blue-600 text-sm font-semibold mb-4">01 / ENTERPRISE INTEGRATION</p>
+                    <h3 class="text-2xl font-bold mb-4">Architecture that connects your business</h3>
+                    <p class="text-gray-600 leading-relaxed">Integration architecture and blueprints, reusable webMethods frameworks, legacy modernization and platform migration. Our professionals work alongside your team from design through platform administration and upgrades.</p>
+                </article>
+                <article class="glass-panel bg-white p-8 rounded-2xl">
+                    <p class="text-blue-600 text-sm font-semibold mb-4">02 / API MANAGEMENT</p>
+                    <h3 class="text-2xl font-bold mb-4">Govern your digital platforms</h3>
+                    <p class="text-gray-600 leading-relaxed">API strategy and platform architecture, gateway deployment, lifecycle management, and security policies. Build consistent standards across teams with governed APIs and reliable platform operations.</p>
+                </article>
+                <article class="glass-panel bg-white p-8 rounded-2xl">
+                    <p class="text-blue-600 text-sm font-semibold mb-4">03 / AI ENGINEERING</p>
+                    <h3 class="text-2xl font-bold mb-4">Bring intelligence into production</h3>
+                    <p class="text-gray-600 leading-relaxed">Private model deployment, domain fine-tuning, inference optimization and retrieval-augmented generation. Engineer tool-using agents with access controls, human approvals and observability.</p>
+                </article>
+                <article class="glass-panel bg-white p-8 rounded-2xl">
+                    <p class="text-blue-600 text-sm font-semibold mb-4">04 / AI GATEWAY &amp; MCP</p>
+                    <h3 class="text-2xl font-bold mb-4">Connect agents with control</h3>
+                    <p class="text-gray-600 leading-relaxed">Govern model traffic with routing, caching, token budgets and audit logging. Expose enterprise APIs and systems through MCP servers with scoped permissions and tool registry governance.</p>
+                </article>
+                <article class="glass-panel bg-white p-8 rounded-2xl">
+                    <p class="text-blue-600 text-sm font-semibold mb-4">05 / QUALITY ENGINEERING</p>
+                    <h3 class="text-2xl font-bold mb-4">Measure before you ship</h3>
+                    <p class="text-gray-600 leading-relaxed">Evaluate model accuracy and groundedness, verify agent task success and tool calls, and test API contracts. Integrate regression, performance and security checks into delivery pipelines.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="py-20" aria-labelledby="platforms-title">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 id="platforms-title" class="text-3xl md:text-4xl font-bold mb-5">Expertise across your platform estate</h2>
+                <p class="text-lg text-gray-600">Practical delivery and operational support across leading enterprise integration and API platforms.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article class="rounded-2xl border border-gray-200 p-7 bg-white"><h3 class="text-xl font-bold mb-3">IBM webMethods</h3><p class="text-gray-600 leading-relaxed">Integration Server, flow services, Universal Messaging, IBM Hybrid Integration, framework design and upgrades.</p></article>
+                <article class="rounded-2xl border border-gray-200 p-7 bg-white"><h3 class="text-xl font-bold mb-3">Google Apigee</h3><p class="text-gray-600 leading-relaxed">API proxies and policies, hybrid deployments, developer portals, security frameworks and CI/CD.</p></article>
+                <article class="rounded-2xl border border-gray-200 p-7 bg-white"><h3 class="text-xl font-bold mb-3">Oracle Integration</h3><p class="text-gray-600 leading-relaxed">OIC adapters and orchestrations, SOA Suite and OSB maintenance, and middleware modernization.</p></article>
+                <article class="rounded-2xl border border-gray-200 p-7 bg-white"><h3 class="text-xl font-bold mb-3">MuleSoft</h3><p class="text-gray-600 leading-relaxed">API-led connectivity, Mule flow development and CloudHub runtime operations on Anypoint Platform.</p></article>
+                <article class="rounded-2xl border border-gray-200 p-7 bg-white"><h3 class="text-xl font-bold mb-3">IBM API Connect</h3><p class="text-gray-600 leading-relaxed">Gateway and portal configuration, product and plan lifecycles, and DataPower policies.</p></article>
+                <article class="rounded-2xl border border-gray-200 p-7 bg-white"><h3 class="text-xl font-bold mb-3">Kong</h3><p class="text-gray-600 leading-relaxed">Gateway and Kubernetes Ingress, custom plugins, authentication, rate limiting and observability.</p></article>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-gray-50" aria-labelledby="engagements-title">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <div class="max-w-3xl mb-12">
+                <p class="text-blue-600 font-semibold mb-3">ENGAGEMENT MODELS</p>
+                <h2 id="engagements-title" class="text-3xl md:text-4xl font-bold mb-5">Scale on your terms</h2>
+                <p class="text-lg text-gray-600">Choose the delivery model that fits your roadmap, team and operating needs.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <article class="glass-panel bg-white p-8 rounded-2xl"><p class="text-blue-600 font-semibold mb-3">Managed services</p><h3 class="text-2xl font-bold mb-4">Outcome-based support</h3><p class="text-gray-600 leading-relaxed">SLA-backed platform operations, monitoring and enhancement backlogs for your integration and API estate.</p></article>
+                <article class="glass-panel bg-white p-8 rounded-2xl"><p class="text-blue-600 font-semibold mb-3">T&amp;M staffing</p><h3 class="text-2xl font-bold mb-4">Capacity when you need it</h3><p class="text-gray-600 leading-relaxed">Experienced consultants billed by the day or month, with capacity scaled to your project’s demand.</p></article>
+                <article class="glass-panel bg-white p-8 rounded-2xl"><p class="text-blue-600 font-semibold mb-3">Onsite, offshore or blended</p><h3 class="text-2xl font-bold mb-4">Delivery that fits your team</h3><p class="text-gray-600 leading-relaxed">Onsite presence in Saudi Arabia with offshore engineering hubs in Pakistan and India, supported by overlapping working hours.</p></article>
+                <article class="glass-panel bg-white p-8 rounded-2xl"><p class="text-blue-600 font-semibold mb-3">Dedicated ODC</p><h3 class="text-2xl font-bold mb-4">Your extended engineering team</h3><p class="text-gray-600 leading-relaxed">A dedicated offshore development centre with named engineers, your tooling and standards, and retained domain knowledge.</p></article>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 md:py-24" aria-labelledby="consultancy-cta">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <div class="glass-panel rounded-3xl bg-gradient-to-r from-blue-50 to-purple-50 p-8 md:p-16 text-center">
+                <h2 id="consultancy-cta" class="text-3xl md:text-4xl font-bold mb-5">Let’s build your next chapter</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">Tell us about your platforms, delivery goals and resource needs. We’ll discuss the expertise and engagement model that fits.</p>
+                <a href="/contact/" class="btn-ai-primary inline-flex items-center px-8 py-4 rounded-xl font-semibold">Talk to Masna AI <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t border-gray-200 text-gray-600 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../assets/images/noBgColor.png" alt="Masna AI" class="h-8 mr-3">
+                    </div>
+                    <p class="text-gray-600 mb-4">Leading AI solutions for enterprises. We build intelligent agents,
+                        agentic applications, Enterprise MCP, and model engineering services for regulated enterprises.</p>
+                    <p class="text-gray-600 flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>
+                        Building No. 44, Ibn Katheer St, King Abdul Aziz, Riyadh 13334
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-900">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a></li>
+                        <li><a href="/products/" class="text-gray-600 hover:text-blue-600 transition-colors">Products</a></li>
+                        <li><a href="/solutions/" class="text-gray-600 hover:text-blue-600 transition-colors">Solutions</a></li>
+                        <li><a href="/consultancy/" class="text-gray-600 hover:text-blue-600 transition-colors">Consultancy</a></li>
+                        <li><a href="/about/" class="text-gray-600 hover:text-blue-600 transition-colors">Company</a></li>
+                        <li><a href="/contact/" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-900">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/masna-ai"
+                            class="w-10 h-10 rounded-lg bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://x.com/MasnaAi"
+                            class="w-10 h-10 rounded-lg bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://github.com/orgs/masna-ai"
+                            class="w-10 h-10 rounded-lg bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-white transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">&copy; 2026 Masna AI. All rights reserved.</p>
+                <div class="flex space-x-4 text-sm text-gray-500">
+                    <a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-blue-600 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
